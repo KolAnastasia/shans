@@ -73,11 +73,123 @@
     </header>
 </template>
 
+<script>
+export default {
+
+}
+
+    
+// let select = function () {
+//     let selectHeader = document.querySelector('.feedback-select_header');
+//     let selectItem = document.querySelector('.feedback-select_body_item');
+//     selectHeader.click(function () {
+//         selectToggle();
+//     });
+//     selectItem.each(function () {
+//         $(this).click(function () {
+//             selectChoose(this);
+//         });
+//     });
+//     function selectToggle() {
+//         $('.contacts-feedback_form_theme').toggleClass('active');
+//     }
+//     function selectChoose(option) {
+//         let selectedText = $(option).text();
+//         $('.select__current').text(selectedText);
+//         selectToggle();
+//     }
+// };
+// select();
+
+</script>
 <style lang="sass" scoped>
 .header
     &_wrap
         padding: 25px 0
         display: flex
         justify-content: space-between
+    &_menu
+        ul 
+            display: flex
+            list-style: none
+            padding-left: 0
+            margin: 0
+            li 
+                margin-right: 30px
+                a 
+                    text-decoration: none
+                    color: #000000
+                    padding: 15px 0
+                    font-size: 0.875rem
+                    transition: .2s
+                    &:hover 
+                        color: #78BE20
+                        transition: .2s
+    &_city
+        margin-left: 10px
+        &-choose
+            display: flex
+            font-size: 14px
+            line-height: 17px
+            color: #9E9E9E
+            svg
+                margin-top: 6px
+    &_number
+        position: relative
+        &::before
+            position: absolute
+            right: calc(100% + 12px)
+            top: 6px
+            width: 10px
+            height: 14px
+            content: ""
+            background: url('../assets/mob-icon.svg')
+        &_link
+            font-weight: 800
+            font-size: 14px
+            line-height: 17px
+            color: #000000    
+            text-decoration: none            
+            &:hover
+                color: #78BE20
+                transition: .2s    
+
+    &_language
+        font-size: 14px
+        line-height: 17px
+        color: #9E9E9E
+        &_value
+            display: flex
+            align-items: center
+            margin-top: 10px
+            &_country
+                font-weight: 800
+                font-size: 14px
+                line-height: 17px
+                color: #000000
+                margin-left: 10px
+
+    &_favourites 
+        width: 60px
+        height: 60px
+        border: 1px solid #E5E5E5
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        cursor: pointer
+
+        span 
+            display: inline-block
+            background-color: #78BE20
+            padding: 4px 5px
+            border-radius: 50%
+            font-weight: bold
+            font-size: 10px
+            line-height: 12px
+            color: #FFFFFF
+            position: absolute
+            top: -12px
+            right: 6px
 
 </style>
