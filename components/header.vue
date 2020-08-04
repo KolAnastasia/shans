@@ -191,5 +191,24 @@ export default {
             position: absolute
             top: -12px
             right: 6px
-
+    .main-nav
+        background: #78BE20
+        ul 
+            list-style: none
+            padding: 0
+            margin: 0
+            display: flex
+            padding: 10px 0
+            justify-content: space-between
+            li a 
+                font-weight: bold
+                font-size: 14px
+                line-height: 17px
+                color: #FFFFFF
+                text-decoration: none
+                padding: 12px 5px
+                display: inline-block
+                position: relative
+                &:hover
+                    text-decoration: underline
 </style>

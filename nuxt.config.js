@@ -26,6 +26,17 @@ module.exports = {
   /*
   ** Build configuration
   */
+  modules: [
+    'nuxt-sass-resources-loader',
+    '@nuxtjs/axios',
+  ],
+  axios: {
+    proxyHeaders: false
+  },
+  plugins: [ 
+    { src: '~/plugins/main.js'},
+    { src: '~plugins/mainslider.js', ssr: false }
+  ],
   build: {
     /*
     ** Run ESLint on save
