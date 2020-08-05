@@ -98,17 +98,23 @@
         </div>
       </div>
     </div>
+    <app-formquest> </app-formquest>
+    <app-Footer></app-Footer>
   </section>
 </template>
 
 <script>
 import appHeader from "@/components/header.vue";
+import appFooter from "@/components/footer.vue";
+import appFormquest from "@/components/form-quest.vue";
 import appBanner from "@/components/main-page/main-slider.vue";
 
 export default {
   components: {
     appHeader,
     appBanner,
+    appFooter,
+    appFormquest
   },
 };
 </script>
