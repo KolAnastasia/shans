@@ -32,8 +32,8 @@
           </a>
         </div>
         <div class="form-quest_agreement">
-          <input type="checkbox" name id="agreement" checked />
-          <label for="agreement">Даю согласие на обработку персональных данных</label>
+          <input type="checkbox" name id="agreement" checked  required/>
+          <label for="agreement">Даю согласие на <a href="#" >обработку персональных данных </a></label>
         </div>
         <button type="submit">
           Отправить
@@ -98,6 +98,39 @@ export default {
             display: flex
             justify-content: space-between
             margin-bottom: 20px 
+        &_geo
+          a 
+            color: #ffffff
+            display: flex
+            font-weight: bold
+            font-size: 12px
+            line-height: 14px
+            letter-spacing: 0.1em
+            text-transform: uppercase
+            align-items: center
+            text-decoration: none
+            img 
+              margin-right:  15px
+            &:hover 
+              text-decoration: underline
+        &_agreement
+          #agreement 
+            display: none 
+          label 
+            margin-left: 30px 
+            position: relative
+            font-size: 12px
+            line-height: 14px
+            opacity: 0.5
+            a 
+              color: #ffffff
+              text-decoration: none
+              &:hover 
+                text-decoration: underline
+                
+
+
+
     &_title 
         font-weight: bold
         font-size: 36px
