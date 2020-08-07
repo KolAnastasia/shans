@@ -98,6 +98,7 @@
         </div>
       </div>
     </div>
+    <app-Formsingup> </app-Formsingup>
     <app-formquest> </app-formquest>
     <app-Footer></app-Footer>
   </section>
@@ -107,6 +108,7 @@
 import appHeader from "@/components/header.vue";
 import appFooter from "@/components/footer.vue";
 import appFormquest from "@/components/form-quest.vue";
+import appFormsingup from "@/components/form-sing-up.vue";
 import appBanner from "@/components/main-page/main-slider.vue";
 
 export default {
@@ -114,7 +116,8 @@ export default {
     appHeader,
     appBanner,
     appFooter,
-    appFormquest
+    appFormquest,
+    appFormsingup
   },
 };
 </script>

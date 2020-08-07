@@ -35,24 +35,26 @@
           <input type="checkbox" name id="agreement" checked  required/>
           <label for="agreement">Даю согласие на <a href="#" >обработку персональных данных </a></label>
         </div>
-        <button type="submit">
-          Отправить
-          <span>
-            <svg
-              width="39"
-              height="11"
-              viewBox="0 0 39 11"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 5.5H37M37 5.5L32.4922 1M37 5.5L32.4922 10"
-                stroke="white"
-                stroke-width="2"
-              />
-            </svg>
-          </span>
-        </button>
+        <div class="btn-wrap">
+          <button type="submit">
+            Отправить
+            <span>
+              <svg
+                width="39"
+                height="11"
+                viewBox="0 0 39 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 5.5H37M37 5.5L32.4922 1M37 5.5L32.4922 10"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
       </form>
     </div>
   </div>
@@ -60,31 +62,32 @@
 
 <script>
 export default {
-//         if ($('div').is(".feedback-select_header")) {
-//      let select = function () {
-//             let selectHeader = $('.feedback-select_header');
-//             let selectItem = $('.feedback-select_body_item');
-//             selectHeader.click(function () {
+
+      
+};
+  
+   
+// let select = function () {
+//             let selectHeader = document.querySelector('.form-quest_header');
+//             let selectItem =  document.querySelectorAll('.form-quest_body_item');
+//             selectHeader.addEventListener("click", function () {
 //                 selectToggle();
 //             });
-//             selectItem.each(function () {
-//                 $(this).click(function () {
+//             selectItem.forEach(function () {
+//                 this.addEventListener("click", function () {
 //                     selectChoose(this);
 //                 });
 //             });
 //             function selectToggle() {
-//                 $('.contacts-feedback_form_theme').toggleClass('active');
+//                 document.querySelector('.form-quest_theme').classList.toggle('active');
 //             }
 //             function selectChoose(option) {
-//                 let selectedText = $(option).text();
-//                 $('.select__current').text(selectedText);
+//                 let selectedText = option.innerText
+//                 document.querySelector('.form-quest__current').innerText(selectedText);
 //                 selectToggle();
 //             }
 //         };
 //         select();
-//         }
-
-};
 
 </script>
 
@@ -97,12 +100,50 @@ export default {
         &_top
             display: flex
             justify-content: space-between
-            margin-bottom: 20px 
+            margin-bottom: 50px 
+        &_header 
+          cursor: pointer
+          position: relative
+          font-weight: bold
+          font-size: 12px
+          line-height: 14px
+          letter-spacing: 0.1em
+          text-transform: uppercase
+          opacity: 0.5
+          border-bottom: 1px solid rgba(256, 256, 256, 0.5)
+          padding-bottom: 12px
+          &:after
+            position: absolute
+            content: ""
+            background: url('../assets/select-icon.svg')
+            right: 15px
+            top: 2px
+            width: 8px
+            height: 5px
+        &_theme 
+            .form-quest_body
+              max-height: 0
+              position: absolute
+              left: 0
+              right: 0
+              bottom: 0
+              overflow: hidden
+              line-height: 0
+              background-color: #78BE20
+        &_theme.active 
+            .form-quest_body
+              max-height: 100%
+              position: absolute
+              left: 0
+              right: 0
+              bottom: 0
+              overflow: visible
+              line-height: 100%
         &_geo
           a 
             color: #ffffff
             display: flex
-            font-weight: bold
+            font-weight: 800
             font-size: 12px
             line-height: 14px
             letter-spacing: 0.1em
@@ -121,14 +162,24 @@ export default {
             position: relative
             font-size: 12px
             line-height: 14px
-            opacity: 0.5
+            color: rgba(256, 256, 256, 0.5)
+            cursor: pointer
             a 
-              color: #ffffff
+              color: rgba(256, 256, 256, 0.5)
               text-decoration: none
               &:hover 
                 text-decoration: underline
-                
-
+            &:before 
+              position: absolute
+              content: ""
+              left: -30px
+              top: -4px
+              width: 18px
+              opacity: 0.5
+              border: 1px solid #FFFFFF
+              height: 18px
+              cursor: pointer
+          
 
 
     &_title 
@@ -155,6 +206,7 @@ export default {
             background: none
             padding-bottom: 12px
             color: #ffffff
+            box-sizing: border-box
             font-size: 16px
             &::placeholder
                 font-weight: bold
@@ -168,4 +220,39 @@ export default {
                 color: transparent
         #questions 
             grid-column: span 2
+        .btn-wrap
+          display: flex
+          justify-content: flex-end
+          button 
+            background: none
+            border: none
+            width: 200px
+            font-weight: 800
+            font-size: 12px
+            line-height: 14px
+            display: flex
+            align-items: center
+            letter-spacing: 0.1em
+            text-transform: uppercase
+            cursor: pointer
+            color: #FFFFFF
+            span 
+              display: inline-block
+              margin-left: 25px
+              transition: .2s
+            &:hover 
+              span 
+                margin-left: 35px
+                transition: .2s
+
+
+#agreement:checked + label:after 
+  position: absolute
+  content: ""
+  width: 10px
+  height: 10px
+  background-color: #ffffff
+  left: -25px
+  top: 1px
+
 </style>

@@ -38,6 +38,7 @@ module.exports = {
     { src: '~plugins/mainslider.js', ssr: false }
   ],
   build: {
+    extractCSS: true,
     /*
     ** Run ESLint on save
     */
