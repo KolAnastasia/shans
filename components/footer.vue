@@ -110,15 +110,22 @@
                 <label for="agreement">Даю согласие на <a href="#"> обработку персональных данных </a> </label>
             </form>
         </div>
+        <div class="footer_copyright-wr">
         <div class="footer_copyright">
             &copy; Группа компаний «Шанс», 2020
         </div>
+        <div class="footer-dev">
+            Design by <a href="https://juno.ru/"> Juno </a>
+        </div>
+        </div>
+        <div class="footer-wrap-link">
         <div class="footer_links">
             <a href="#">  Политика конфиденциальности </a>
             <a href="#">  Правила пользования сайтом </a>
         </div>
         <div class="footer-dev">
             Design by <a href="https://juno.ru/"> Juno </a>
+        </div>
         </div>
       </div>
     </footer>
@@ -207,6 +214,11 @@ export default {
                     &:hover
                         text-decoration: none 
 
+        &-wrap-link
+          display: flex
+          justify-content: space-between
+          grid-column: span 2
+        
         &_soc a 
             display: inline-block
             margin-right: 22px
@@ -274,6 +286,9 @@ export default {
             font-size: 14px
             line-height: 17px
             color: #9E9E9E
+            &-wr 
+              .footer-dev 
+                display: none
 
         &_links a
             font-size: 14px
@@ -289,7 +304,9 @@ export default {
             font-size: 14px
             line-height: 17px
             color: #9E9E9E
-            text-align: right
+            display: flex
+            align-items: center 
+            justify-content: flex-end
             a
                 color: #78BE20
                 text-decoration: none
@@ -306,8 +323,65 @@ export default {
             top: 1px
             cursor: pointer
             background-color: #78BE20
-                    
-                    
+       
+                        
+    @media screen and (max-width: 1200px) 
+      .footer 
+        &_menu 
+          display: none 
+        &-container 
+          grid-gap: 25px 30px   
+          
+        &_soc 
+          a 
+            margin-right: 5px
 
+    @media screen and (max-width: 1024px) 
+      .footer 
+        &-container 
+          display: flex
+          flex-direction: column
+        &-wrap-link
+          display: flex
+          justify-content: space-between
+          grid-column: span 1
+        &_address
+          margin-bottom: 50px
+          order: 1
+        &_soc
+          margin-bottom: 50px
+          order: 2
+        &_form
+          margin-bottom: 50px
+          order: 3
+          form 
+            div 
+              input 
+                max-width: 515px
+        &_copyright-wr
+          margin-bottom: 50px
+          order: 5
+          display: flex
+          justify-content: space-between
+          .footer-dev 
+            display: block
+        &-wrap-link
+          margin-bottom: 50px
+          order: 4
+          .footer-dev
+            display: none
+
+    @media screen and (max-width: 600px)    
+        .footer
+          &_form 
+            form 
+              div
+                flex-direction: column
+                input 
+                  box-sizing: border-box
+                  max-width: 100%
+                  margin-bottom: 25px
+                button 
+                  width: 100%
 
 </style>

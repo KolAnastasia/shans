@@ -13,7 +13,7 @@
                         <li><nuxt-link to="/career"> Карьера </nuxt-link></li>    
                         <li><nuxt-link to="/press_center">Пресс-центр</nuxt-link></li>    
                         <li><nuxt-link to="/documentation">Документация </nuxt-link></li>    
-                        <li><nuxt-link to="/contacts">Контакты</nuxt-link></li>    
+                        <li><nuxt-link to="/contacts">Контакты</nuxt-link></li>   
                     </ul>
                 </nav>
                 <div class="header-city-tel">
@@ -67,6 +67,15 @@
                     <li><nuxt-link to="/">Программы защиты растений </nuxt-link></li>
                     <li><nuxt-link to="/">Вредные объекты</nuxt-link></li>
                     <li><nuxt-link to="/">Полезная информация</nuxt-link></li>
+                        <li>
+                            <nuxt-link to="/search">
+                                <div class="header_seacrh-btn" >
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.7871 12.7475L10.3359 9.28317C11.2233 8.26509 11.7095 6.98412 11.7095 5.65058C11.7095 2.5349 9.08299 0 5.85474 0C2.62649 0 0 2.5349 0 5.65058C0 8.76627 2.62649 11.3012 5.85474 11.3012C7.06667 11.3012 8.22158 10.9484 9.20899 10.2787L12.6864 13.7692C12.8318 13.9149 13.0273 13.9953 13.2368 13.9953C13.4351 13.9953 13.6232 13.9223 13.766 13.7896C14.0694 13.5078 14.0791 13.0406 13.7871 12.7475ZM5.85474 1.47407C8.24092 1.47407 10.1821 3.3476 10.1821 5.65058C10.1821 7.95357 8.24092 9.8271 5.85474 9.8271C3.46855 9.8271 1.52732 7.95357 1.52732 5.65058C1.52732 3.3476 3.46855 1.47407 5.85474 1.47407Z" fill="white"/>
+                                    </svg>
+                                </div>
+                            </nuxt-link>
+                        </li>  
                 </ul>
             </div>
         </nav>
@@ -191,6 +200,9 @@ export default {
             position: absolute
             top: -12px
             right: 6px
+    
+    
+
     .main-nav
         background: #78BE20
         ul 
@@ -211,4 +223,19 @@ export default {
                 position: relative
                 &:hover
                     text-decoration: underline
+
+.header_seacrh-btn
+    background-color: #67AD0F
+    padding: 25px
+    height: 100%
+    margin-top: -21px
+    margin-bottom: -23px
+
+@media screen and (max-width: 1200px) 
+    .header 
+        &_menu 
+            display: none 
+    
+    .main-nav
+        display: none
 </style>

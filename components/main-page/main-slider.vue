@@ -6,7 +6,11 @@
                 :options="slickOptions" 
                 class="slider">
                 <div class="main-slider-item">
-                    <img :src="getImage('banner1.jpg')" alt="" />
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="../../assets/banner1-mob.jpg">
+                        <img srcset="../../assets/banner1.jpg" alt="" >
+                    </picture>
+                 
                     <div class="main-slider_content">
                         <h1> Производство <br> и реализация СЗР </h1>
                         <div class="main-slider_content_bottom">
@@ -115,5 +119,14 @@ export default {
         position: absolute
         z-index: 2
 
+@media screen and (max-width: 600px) 
+    .main-slider
+        &_content 
+            top: 65px
+            left: 20px
+            h1 
+                font-size: 36px
+            &_desc 
+                padding-right: 20px
         
 </style>

@@ -14,8 +14,8 @@
             <input type="text" placeholder="Ваше имя" />
             <input type="tel" name id placeholder="Телефон" />
             <div>
-              <input type="checkbox" required checked id="agreement" />
-              <label for="agreement">
+              <input type="checkbox" required checked id="agreement-sing" />
+              <label for="agreement-sing">
                 Даю согласие на
                 <a href="#">обработку персональных данных</a>
               </label>
@@ -97,7 +97,7 @@ export default {
                     color: transparent                
         div 
             display: flex
-            #agreement
+            #agreement-sing
                 display: none
             label 
                 margin-left: 30px 
@@ -147,7 +147,7 @@ export default {
                         margin-left: 35px
                         transition: .2s 
 
-#agreement:checked + label:after 
+#agreement-sing:checked + label:after 
     position: absolute
     content: ""
     width: 10px
@@ -156,4 +156,30 @@ export default {
     left: -25px
     top: 1px  
 
+@media screen  and (max-width: 981px)
+  .form-sing
+    &_wr 
+      flex-direction: column
+    &_left
+      max-width: 100%
+      &_desc 
+        margin-bottom: 50px
+        max-width: 100%
+    &_right 
+      input 
+        max-width: 100%
+      div 
+        justify-content: space-between
+
+@media screen  and (max-width: 600px)
+  .form-sing
+    &_wr 
+      flex-direction: column
+    &_left
+      max-width: 100%
+    &_right 
+      div 
+        flex-direction: column
+        label 
+          margin-bottom: 40px
 </style>

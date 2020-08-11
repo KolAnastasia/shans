@@ -31,9 +31,10 @@
             Ближайший офис
           </a>
         </div>
+        <div class="form-quest_bottom-wr">
         <div class="form-quest_agreement">
-          <input type="checkbox" name id="agreement" checked  required/>
-          <label for="agreement">Даю согласие на <a href="#" >обработку персональных данных </a></label>
+          <input type="checkbox" name id="agreement-quest" checked  required/>
+          <label for="agreement-quest">Даю согласие на <a href="#" >обработку персональных данных </a></label>
         </div>
         <div class="btn-wrap">
           <button type="submit">
@@ -55,6 +56,7 @@
             </span>
           </button>
         </div>
+        </div>
       </form>
     </div>
   </div>
@@ -62,7 +64,10 @@
 
 <script>
 export default {
-
+  methods: {
+    
+  },
+  
       
 };
   
@@ -155,7 +160,7 @@ export default {
             &:hover 
               text-decoration: underline
         &_agreement
-          #agreement 
+          #agreement-quest 
             display: none 
           label 
             margin-left: 30px 
@@ -179,7 +184,10 @@ export default {
               border: 1px solid #FFFFFF
               height: 18px
               cursor: pointer
-          
+        &_bottom-wr
+          grid-column: span 2
+          display: flex
+          justify-content: space-between
 
 
     &_title 
@@ -246,7 +254,7 @@ export default {
                 transition: .2s
 
 
-#agreement:checked + label:after 
+#agreement-quest:checked + label:after 
   position: absolute
   content: ""
   width: 10px
@@ -254,5 +262,43 @@ export default {
   background-color: #ffffff
   left: -25px
   top: 1px
+
+
+
+@media screen and (max-width: 1200px) 
+  .form-quest
+    &_form
+      .btn-wrap 
+        justify-content: flex-start
+
+@media screen and (max-width: 1000px) 
+  .form
+    &_title
+      margin-bottom: 15px
+    &-quest
+      &_top
+        flex-direction: column
+      &_form
+        #questions
+          grid-column: span 1
+    &_desc 
+      max-width: 100%
+
+@media screen and (max-width: 800px) 
+  .form
+    &-quest
+      &_form
+        #questions
+          grid-column: span 1
+      &_bottom-wr
+        grid-column: span 1
+
+@media screen and (max-width: 600px) 
+  .form
+    &-quest
+      &_bottom-wr
+        flex-direction: column
+      &_agreement 
+        margin-bottom: 40px
 
 </style>

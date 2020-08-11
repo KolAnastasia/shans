@@ -99,7 +99,40 @@
       </div>
     </div>
     <app-Formsingup> </app-Formsingup>
+    <app-Catalogszr> </app-Catalogszr>
     <app-formquest> </app-formquest>
+    <div class="main_trust"> 
+      <div class="container">
+        <div class="main_trust-wr">
+          <div class="main_trust_subtitle"> 
+            Нам доверяют
+          </div>
+          <div class="main_trust_content"> 
+             <slick-slide
+                ref="slick"
+                :options="slickOptions" 
+                class="slider">
+          
+            <div class="main_trust_content_item">
+              <img :src="getImage('trust1.png')" alt />
+            </div>
+            <div class="main_trust_content_item">
+              <img :src="getImage('trust2.png')" alt />
+            </div>
+            <div class="main_trust_content_item">
+              <img :src="getImage('trust3.png')" alt />
+            </div>
+            <div class="main_trust_content_item">
+              <img :src="getImage('trust4.png')" alt />
+            </div>
+            <div class="main_trust_content_item">
+              <img :src="getImage('trust5.png')" alt />
+            </div>
+              </slick-slide>
+          </div>
+        </div>
+      </div>
+    </div>
     <app-Footer></app-Footer>
   </section>
 </template>
@@ -108,6 +141,7 @@
 import appHeader from "@/components/header.vue";
 import appFooter from "@/components/footer.vue";
 import appFormquest from "@/components/form-quest.vue";
+import appCatalogszr from "@/components/catalog-szr.vue";
 import appFormsingup from "@/components/form-sing-up.vue";
 import appBanner from "@/components/main-page/main-slider.vue";
 
@@ -117,8 +151,52 @@ export default {
     appBanner,
     appFooter,
     appFormquest,
+    appCatalogszr,
     appFormsingup
   },
+    data() {
+		return {
+			slickOptions: {
+				slidesToShow: 1,
+          slidesToScroll: 1,
+          slidesToShow: 4,
+          appendArrows: false,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          dots: false, // показывать `точки`
+          responsive: [
+            {     
+            breakpoint: 1200,
+            settings: {
+            slidesToShow: 3,
+          }
+         },            
+         {     
+            breakpoint: 981,
+            settings: {
+            slidesToShow: 2,
+          }
+         },
+         {     
+            breakpoint: 768,
+            settings: {
+            slidesToShow: 3,
+            centerMode: true,
+            centerPadding: '0'
+          }
+         },
+         {     
+            breakpoint: 500,
+            settings: {
+            slidesToShow: 2,
+            centerMode: true,
+            centerPadding: '0'
+          }
+         },
+         ]
+        }
+      };
+    }
 };
 </script>
 
@@ -212,7 +290,81 @@ export default {
     &:last-of-type:after 
       display: none
       
+.main_trust 
+  background-color: #F9F9F9
+  padding: 66px 0 60px 0
+  &-wr 
+    display: flex
+    justify-content: space-between
+  &_subtitle 
+    font-weight: 800
+    font-size: 36px
+    line-height: 43px
+    text-transform: uppercase
+    margin-right: 100px
+    max-width: 345px
+    width: 100%
+  &_content 
+    max-width: 980px
+    width: 100%
+    overflow: hidden
+    &_item 
+      // margin-right: 25px
 
+
+@media screen and (max-width: 1200px) 
+  .main_desc 
+    display: flex
+    padding-top: 0
+    flex-direction: column
+    &--left 
+      order: 2
+      max-width: 100%
+      &_content 
+        max-width: 100%
+    &--right 
+      order: 1
+      margin-bottom: 65px
+      &_block 
+        width: calc(100% + 50px)
+        margin-left: -25px
+        margin-top: -10px
+        padding-right: 80px
+        box-sizing: border-box
+      &--bottom 
+        max-width: 570px
+        justify-content: space-between
+        &_pluses:first-of-type 
+          margin-right: 10px
+  .main-tape
+    &_item 
+      &:after 
+        right: -65px
+
+@media screen and (max-width: 981px) 
+  .main-tape
+    display: grid
+    grid-template-columns: 1fr 1fr 
+    grid-gap: 45px 60px
+    &_item 
+      &:after 
+        display: none
+
+@media screen and (max-width: 768px) 
+
+  .main_desc 
+    &--right 
+      &_block 
+        padding: 65px 20px
+
+  .main_trust 
+    &-wr 
+      flex-direction: column
+    &_subtitle 
+      margin-right: 0
+      margin-bottom: 50px
+
+  
 
 </style>
 
