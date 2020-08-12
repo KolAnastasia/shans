@@ -229,7 +229,7 @@ export default {
     padding: 25px
     height: 100%
     margin-top: -21px
-    margin-bottom: -23px
+    margin-bottom: -22px
 
 @media screen and (max-width: 1200px) 
     .header 

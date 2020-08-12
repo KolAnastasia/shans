@@ -1,0 +1,140 @@
+[
+    {
+        "id": 1,
+        "name": "Свидетельства",
+        "items": [ 
+            {
+                "name": "Агрошанс. Свидетельство о государственной регистрации",
+                "link": "Agroshans._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Беташанс Дабл. Свидетельство о государственной регистрации",
+                "link": "Betashans_Dabl._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Беташанс Трио. Свидетельство о государственной регистрации",
+                "link": "Betashans_Trio._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Борошанс. Свидетельство о государственной регистрации",
+                "link": "Boroshans._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Виташанс. Свидетельство о государственной регистрации",
+                "link": "Vitashans._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Галошанс. Свидетельство о государственной регистрации",
+                "link": "Galoshans._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Глифошанс. Дополнение к свидетельству о государственной регистрации",
+                "link": "Glifoshans._Dopolnenie_k_svidetel'stvu_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Глифошанс. Свидетельство о государственной регистрации",
+                "link": "Glifoshans._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "ДВД Шанс. Свидетельство о государственной регистрации",
+                "link": "DVD_SHans._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Дикошанс. Свидетельство о государственной регистрации",
+                "link": "Dikoshans._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Агрошанс. Свидетельство о государственной регистрации",
+                "link": "Agroshans._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Беташанс Дабл. Свидетельство о государственной регистрации",
+                "link": "Betashans_Dabl._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Беташанс Трио. Свидетельство о государственной регистрации",
+                "link": "Betashans_Trio._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Борошанс. Свидетельство о государственной регистрации",
+                "link": "Boroshans._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Виташанс. Свидетельство о государственной регистрации",
+                "link": "Vitashans._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Галошанс. Свидетельство о государственной регистрации",
+                "link": "Galoshans._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Глифошанс. Дополнение к свидетельству о государственной регистрации",
+                "link": "Glifoshans. Dopolnenie k svidetel'stvu o gosudarstvennoj registracii"
+            },
+            {
+                "name": "Глифошанс. Свидетельство о государственной регистрации",
+                "link": "Glifoshans._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "ДВД Шанс. Свидетельство о государственной регистрации",
+                "link": "DVD_SHans._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Дикошанс. Свидетельство о государственной регистрации",
+                "link": "Dikoshans._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            }
+        ]
+    }, 
+    {
+    "id": 2, "name": "Декларации о соответствии",
+    "items": [ 
+            {
+                "name": "Агрошанс. Декларации о государственной регистрации",
+                "link": "Agroshans._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Беташанс Дабл. Декларации о государственной регистрации",
+                "link": "Betashans_Dabl._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Беташанс Трио. Декларации о государственной регистрации",
+                "link": "Betashans_Trio._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            }
+        ]
+    },
+    {
+    "id": 3, "name": "Листки безопасности",
+    "items": [ 
+            {
+                "name": "Агрошанс. Листки безопасности о государственной регистрации",
+                "link": "Agroshans._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Беташанс Дабл. Листки безопасности о государственной регистрации",
+                "link": "Betashans_Dabl._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Беташанс Трио. Листки безопасности о государственной регистрации",
+                "link": "Betashans_Trio._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            }
+        ]
+    },
+    {
+    "id": 3, "name": "Прайс-листы",
+    "items": [ 
+            {
+                "name": "Агрошанс. Прайс-листы о государственной регистрации",
+                "link": "Agroshans._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Беташанс Дабл. прайс-листы государственной регистрации",
+                "link": "Betashans_Dabl._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            },
+            {
+                "name": "Беташанс Трио. прайс-листы государственной регистрации",
+                "link": "Betashans_Trio._Svidetel'stvo_o_gosudarstvennoj_registracii"
+            }
+        ]
+    }
+
+]
