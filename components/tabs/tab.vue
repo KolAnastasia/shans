@@ -1,9 +1,5 @@
 <template>
-  <div v-show="isActive" class="tab-wrap">
-      <ul>
-          <!-- <li v-for=""> </li> -->
-      </ul>
-  </div>
+  <div v-show="isActive" class="tab-wrap"><slot></slot></div>
 </template>
 
 <script>
