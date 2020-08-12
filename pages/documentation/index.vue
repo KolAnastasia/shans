@@ -8,7 +8,7 @@
       :actPage="actPage"
     >
     </app-breadcrumb>
-    <app-tabs></app-tabs>
+    <app-certificates></app-certificates>
     <app-formquest> </app-formquest>
     <app-Footer></app-Footer>
   </section>
@@ -17,7 +17,7 @@
 <script>
 import appHeader from "@/components/header.vue";
 import appFooter from "@/components/footer.vue";
-import appTabs from "@/components/tabs/tabs.vue";
+import appCertificates from "@/components/certificates/certificates.vue";
 import appFormquest from "@/components/form-quest.vue";
 import appBreadcrumb from "@/components/breadcrumb.vue";
 
@@ -25,10 +25,11 @@ export default {
     components: {
     appHeader,
     appFooter,
-    appTabs,
+    appCertificates,
     appFormquest,
     appBreadcrumb 
   },
+  
   computed: {
  names() {
       let obj = []
