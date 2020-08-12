@@ -43,27 +43,4 @@ export default {
 
 <style lang="sass" scoped>
 
-    .catalog-szr
-        padding: 100px 0
-        &_item 
-            max-width: 330px
-            border: 1px solid #E5E5E5
-            padding: 30px
-            box-sizing: border-box
-            &_img 
-                margin-bottom: 30px
-                text-align: center
-                img 
-                    width: 100%
-                    max-width: 127px
-            &_title
-                font-weight: bold
-                font-size: 24px
-                line-height: 36px
-                margin-bottom: 10px
-            &_desc
-                font-size: 14px
-                line-height: 24px
-                color: #9E9E9E
-                margin-bottom: 25px
 </style>
