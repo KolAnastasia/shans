@@ -1,4 +1,4 @@
-const plantProtectionData = [
+[
     {
        "title":"Глифошанс Супер, ВР",
        "desc":"Системный гербицид сплошного действия для борьбы с широким спектром сорняков",
@@ -37,4 +37,3 @@ const plantProtectionData = [
          ]
      }
 ]
-export default plantProtectionData;

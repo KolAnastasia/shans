@@ -1,30 +1,10 @@
 <template>
     <div class="container">
-        <div class="catalog-szr">
-            <div class="catalog-szr_item">
-                <div class="catalog-szr_item_img"> 
-                    <img src="../assets/catalog1.png"/>
-                </div>
-                <div class="catalog-szr_item_title"> 
-                    Глифошанс Супер, ВР
-                </div>
-                <div class="catalog-szr_item_desc"> 
-                    Системный гербицид сплошного действия для борьбы с широким спектром сорняков
-                </div>
-                <div class="catalog-szr_item_act-subst"> 
-                    <span> Действующее вещество: </span>
-                        540 г/л глифосата (калийная соль)
-                </div>
-                <div class="catalog-szr_icons">
-                    <div class="catalog-szr_mark">
-                        <img src="../assets/gerbicide.png"/>
-                    </div>
-                    <div class="catalog-szr_fav"> 
-                        <img src="../assets/cat-favourite.svg"/>
-                    </div>
-                </div>
-            </div>
-
+        <div class="catalog-szr-item"
+            v-for="(item, index) in plantsProtectionProducts"
+            :key="index"
+        >
+            <catalog-item></catalog-item>
         </div>
         <nuxt-link to="/"> Вся продукция  
             <svg width="39" height="11" viewBox="0 0 39 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,9 +15,24 @@
 </template>
 
 <script>
+import catalogItem from "@/components/catalog-item";
+import axios from "axios"
+//import data from "@/static/plantProtectionData.js"
 export default {
+    components: {
+        catalogItem
+    },
+    data: function() {
+        return {
+            plantsProtectionProducts : []
+        }
+    },
+    mounted(){
+        axios.get('/plantProtectionData.json').then(response => {
+            this.plantsProtectionProducts = response.data
+        });
+    }
     
-
 }
 
 </script>
