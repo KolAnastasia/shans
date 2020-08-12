@@ -84,31 +84,33 @@
 
 <script>
 export default {
-
+    // mounted(){
+    //     let select = function () {
+    //         let selectHeader = document.querySelector('.feedback-select_header');
+    //         let selectItem = document.querySelector('.feedback-select_body_item');
+    //         selectHeader.click(function () {
+    //             selectToggle();
+    //         });
+    //         selectItem.each(function () {
+    //             $(this).click(function () {
+    //                 selectChoose(this);
+    //             });
+    //         });
+    //         function selectToggle() {
+    //             $('.contacts-feedback_form_theme').toggleClass('active');
+    //         }
+    //         function selectChoose(option) {
+    //             let selectedText = $(option).text();
+    //             $('.select__current').text(selectedText);
+    //             selectToggle();
+    //         }
+    //     };
+    //     select();
+    // }
 }
 
     
-// let select = function () {
-//     let selectHeader = document.querySelector('.feedback-select_header');
-//     let selectItem = document.querySelector('.feedback-select_body_item');
-//     selectHeader.click(function () {
-//         selectToggle();
-//     });
-//     selectItem.each(function () {
-//         $(this).click(function () {
-//             selectChoose(this);
-//         });
-//     });
-//     function selectToggle() {
-//         $('.contacts-feedback_form_theme').toggleClass('active');
-//     }
-//     function selectChoose(option) {
-//         let selectedText = $(option).text();
-//         $('.select__current').text(selectedText);
-//         selectToggle();
-//     }
-// };
-// select();
+
 
 </script>
 <style lang="sass" scoped>

@@ -64,35 +64,32 @@
 
 <script>
 export default {
-  methods: {
-    
-  },
-  
+  mounted() {
+    let select = function () {
+              let selectHeader = document.querySelector('.form-quest_header');
+              let selectItem =  document.querySelectorAll('.form-quest_body_item');
+              selectHeader.addEventListener("click", function () {
+                  selectToggle();
+              });
+              selectItem.forEach(function (item) {
+                  item.addEventListener("click", function () {
+                      selectChoose(item);
+                  });
+              });
+              function selectToggle() {
+                  document.querySelector('.form-quest_theme').classList.toggle('active');
+              }
+              function selectChoose(option) {
+                  let selectedText = option.innerText
+                  document.querySelector('.form-quest__current').innerText(selectedText);
+                  selectToggle();
+              }
+          };
+          select();
+  }
       
 };
-  
-   
-// let select = function () {
-//             let selectHeader = document.querySelector('.form-quest_header');
-//             let selectItem =  document.querySelectorAll('.form-quest_body_item');
-//             selectHeader.addEventListener("click", function () {
-//                 selectToggle();
-//             });
-//             selectItem.forEach(function () {
-//                 this.addEventListener("click", function () {
-//                     selectChoose(this);
-//                 });
-//             });
-//             function selectToggle() {
-//                 document.querySelector('.form-quest_theme').classList.toggle('active');
-//             }
-//             function selectChoose(option) {
-//                 let selectedText = option.innerText
-//                 document.querySelector('.form-quest__current').innerText(selectedText);
-//                 selectToggle();
-//             }
-//         };
-//         select();
+
 
 </script>
 
