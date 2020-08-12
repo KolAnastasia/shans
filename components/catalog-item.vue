@@ -1,21 +1,17 @@
 <template>
     <div class="catalog_item">
         <div class="catalog_item_img"> 
-            <img src="../assets/catalog1.png"/>
+            <img :src="photoUrl"/>
         </div>
-        <div class="catalog_item_title"> 
-            Глифошанс Супер, ВР
-        </div>
-        <div class="catalog_item_desc"> 
-            Системный гербицид сплошного действия для борьбы с широким спектром сорняков
-        </div>
+        <div class="catalog_item_title">{{title}}</div>
+        <div class="catalog_item_desc">{{desc}}</div>
         <div class="catalog_item_act-subst"> 
             <span> Действующее вещество: </span>
-                540 г/л глифосата (калийная соль)
+                {{activeSubstance}}
         </div>
         <div class="catalog_icons">
             <div class="catalog_mark">
-                <img src="../assets/gerbicide.png"/>
+                <img :src="typeIconUrl"/>
             </div>
             <div class="catalog_fav"> 
                 <img src="../assets/cat-favourite.svg"/>
@@ -26,14 +22,13 @@
 
 <script>
 export default {
-    // props: {
-    //     title:String,
-    //     desc:String,
-    //     activeSubstance:String,
-    //     typeIconUrl:String,
-    //     photoUrl:String,
-    //     type:String
-    // }
+    props: {
+        title:String,
+        desc:String,
+        activeSubstance:String,
+        typeIconUrl:String,
+        photoUrl:String
+    }
 
 }
 

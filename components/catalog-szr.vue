@@ -4,7 +4,12 @@
             v-for="(item, index) in plantsProtectionProducts"
             :key="index"
         >
-            <catalog-item></catalog-item>
+            <catalog-item 
+            :title="item.title"
+             :desc="item.desc" 
+             :activeSubstance="item.activeSubstance"
+             :typeIconUrl="item.typeIconUrl"
+             :photoUrl="item.photoUrl" />
         </div>
         <nuxt-link to="/"> Вся продукция  
             <svg width="39" height="11" viewBox="0 0 39 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,7 +22,6 @@
 <script>
 import catalogItem from "@/components/catalog-item";
 import axios from "axios"
-//import data from "@/static/plantProtectionData.js"
 export default {
     components: {
         catalogItem
