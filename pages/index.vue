@@ -99,7 +99,13 @@
       </div>
     </div>
     <app-Formsingup> </app-Formsingup>
-    <app-Catalogszr> </app-Catalogszr>
+    <catalog-filter v-for="(item, index) in availableFilters"
+            :key="index" 
+            :title="item.title" 
+            :name="item.name" 
+            :options="item.options"
+            v-on:filterChanged="onFilterChanged" />
+    <app-Catalogszr :selectedFilters="selectedFilters"> </app-Catalogszr>
     <app-formquest> </app-formquest>
     <div class="main_trust"> 
       <div class="container">
@@ -144,6 +150,8 @@ import appFormquest from "@/components/form-quest.vue";
 import appCatalogszr from "@/components/catalog-szr.vue";
 import appFormsingup from "@/components/form-sing-up.vue";
 import appBanner from "@/components/main-page/main-slider.vue";
+import catalogFilter from "@/components/catalog-filter.vue"
+import axios from "axios"
 
 export default {
   components: {
@@ -152,10 +160,14 @@ export default {
     appFooter,
     appFormquest,
     appCatalogszr,
-    appFormsingup
+    appFormsingup,
+    catalogFilter
   },
     data() {
 		return {
+      filterGroups : ["productType", "productCategory"],
+      selectedFilters:[],
+      availableFilters:[],
 			slickOptions: {
 				slidesToShow: 1,
           slidesToScroll: 1,
@@ -196,6 +208,24 @@ export default {
          ]
         }
       };
+    },
+    mounted(){
+      axios.get('/filters.json').then(response => {
+        this.availableFilters = response.data.filter((item)=>{
+          //берем только те фильтры, которрые перечислены в filterGroups
+          return this.filterGroups.indexOf(item.name)!=-1
+        });
+      });
+    },
+    methods:{
+      onFilterChanged({filterName, selectedValue}){
+        //TODO: check after changing of html for catalog-filter
+        let filter = {
+          "filterName": filterName,
+          "selectedValue": selectedValue
+        }
+        this.selectedFilters.push(filter)
+      }
     }
 };
 </script>

@@ -1,0 +1,44 @@
+[
+    {
+        "title":"Все виды продукции",
+        "name":"productType",
+        "options":[
+            {
+                "value":1,
+                "text":"Средства защиты растений",
+                "icon":null
+            },
+            {
+                "value":2,
+                "text":"Микроудобрения",
+                "icon":null
+            },
+            {
+                "value":3,
+                "text":"Элитные семена",
+                "icon":null
+            }
+        ]
+    },
+    {
+        "title":"Все категории",
+        "name":"productCategory",
+        "options":[
+            {
+                "value":1,
+                "text":"Гербициды",
+                "icon":null
+            },
+            {
+                "value":2,
+                "text":"Протравители",
+                "icon":null
+            },
+            {
+                "value":3,
+                "text":"Фунгициды",
+                "icon":null
+            }
+        ]
+    }
+]
