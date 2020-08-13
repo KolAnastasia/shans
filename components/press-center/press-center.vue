@@ -1,18 +1,25 @@
 <template>
     <div class="container">
         <tabs>
-            <div class="documentation-wr">
-                <tab :name="categories.section" v-for="(category, index) in categories" :key="index" :selected="category.selected">
-                    <press-center-item v-for="(item, index) in categories.items" :key="index"
-                        :title="news.title"
-                        :desc="news.desc"
-                        :date="news.date"
-                        :source="news.source"
-                    />
-                     <btn-More></btn-More>
-                </tab>
-                
+            <div class="wrapper-grid"> 
+                <div class="wrapper-grid_content">
+                    <div class="press-center-wr">
+                        <tab :name="category.section" v-for="(category, index) in categories" :key="index" :selected="category.selected">
+                            <press-center-item v-for="(item, index) in category.items" :key="index"
+                                :title="item.title"
+                                :desc="item.desc"
+                                :date="item.date"
+                                :source="item.source"
+                                :photoUrl="item.photoUrl"
+                            />
+                        </tab>
+                    </div>
+                </div>
+                <aside class="wrapper-grid_aside"> 
+
+                </aside>
             </div>
+           
         </tabs>
     </div>
 </template>
@@ -50,6 +57,15 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-
-
+   
+.press-center-wr
+    .tab-wrap 
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(325px, 1fr))
+        grid-gap: 50px 80px
+        .news_item
+            &:first-of-type
+                grid-column: span 2
+        
+                
 </style>

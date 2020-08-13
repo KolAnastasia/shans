@@ -154,6 +154,7 @@ export default {
             text-decoration: none
             img 
               margin-right:  15px
+              max-width: 14px
             &:hover 
               text-decoration: underline
         &_agreement
