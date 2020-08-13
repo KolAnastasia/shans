@@ -4,8 +4,8 @@
             <div class="wrapper-grid"> 
                 <div class="wrapper-grid_content">
                     <div class="press-center-wr">
-                        <tab :name="category.section" v-for="(category, index) in categories" :key="index" :selected="category.selected">
-                            <press-center-item v-for="(item, index) in category.items" :key="index"
+                        <tab name="Новости" :selected="true">
+                            <press-center-item v-for="(item, index) in newsItems" :key="index"
                                 :title="item.title"
                                 :desc="item.desc"
                                 :date="item.date"
@@ -13,6 +13,13 @@
                                 :photoUrl="item.photoUrl"
                             />
                         </tab>
+                          <tab name="calendar" :selected="false"> 
+                              calendar-content
+                          </tab>
+
+                          <tab name="gallery" :selected="false"> 
+                              gallery-content
+                          </tab>
                     </div>
                 </div>
                 <aside class="wrapper-grid_aside"> 
@@ -39,16 +46,34 @@ export default {
     },
     data: function() {
         return {
-            categories : []
+            newsItems : [],
+            calendarItems:[],
+            galleryItems:[]
         }
     },
     mounted(){
         axios.get('/press-center.json').then(response => {
-                this.categories = response.data;
-                this.categories.forEach(function(news){
-                    news.selected = false;
+                let sections = response.data;
+                let newsSection = sections.filter(function(section){
+                    return section.section == "Новости";
                 });
-                this.categories[0].selected = true;
+                if(newsSection){
+                    this.newsItems = newsSection[0].items;
+                }
+
+                let calendarSection = sections.filter(function(section){
+                    return section.section == "Календарь";
+                });
+                if(calendarSection){
+                    this.calendarItems = calendarSection[0].items;
+                }
+
+                let gallerySection = sections.filter(function(section){
+                    return section.section == "Галерея";
+                });
+                if(gallerySection){
+                    this.galleryItems = gallerySection[0].items;
+                }
             });
     }
     
