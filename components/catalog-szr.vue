@@ -32,34 +32,22 @@ export default {
     },
     data: function() {
         return {
-            allProducts : [],
-            filteredData:[]
+            allProducts : []
         }
     },
-    // computed:{
-    //     filteredData:function(){
-    //         this.selectedFilters;
-    //         return this.allProducts
-    //     }
-    // },
-    // updated(){
-    //     this.filteredData = this.allProducts
-    // },
-    // beforeUpdate(){
-    //     this.filteredData = this.allProducts
-    // },
-    // watch: { 
-    //     selectedFilters:function(){
-    //         this.filteredData = this.allProducts;
-    //         this.selectedFilters.forEach(function(selectedFilter) {
-    //             let tempFilteredData = this.filteredData;
-    //             tempFilteredData = this.filteredData.filter(function(product){
-    //                 return product[selectedFilter.filterName]==selectedFilter.selectedValue
-    //             });
-    //             this.filteredData = tempFilteredData;
-    //         });
-    //     }
-    // },
+    computed:{
+        filteredData:function(){
+            let result = this.allProducts;
+            this.selectedFilters.forEach(function(selectedFilter) {
+                let tempFilteredData = result;
+                tempFilteredData = result.filter(function(product){
+                    return product[selectedFilter.filterName]==selectedFilter.selectedValue
+                });
+                result = tempFilteredData;
+            });
+            return result;
+        }
+    },
     mounted(){
         axios.get('/plantProtectionData.json').then(response => {
             this.allProducts = response.data

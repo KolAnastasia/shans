@@ -220,11 +220,17 @@ export default {
     methods:{
       onFilterChanged({filterName, selectedValue}){
         //TODO: check after changing of html for catalog-filter
-        let filter = {
+        let newFilter = {
           "filterName": filterName,
           "selectedValue": selectedValue
         }
-        this.selectedFilters.push(filter)
+        //before adding filter value to selected filters, check and remove if it already exists there
+        let existingFilterIndex  = this.selectedFilters.findIndex(filter => filter.filterName === newFilter.filterName);
+        if(existingFilterIndex!=-1){
+          this.selectedFilters.splice(existingFilterIndex, 1)
+        }
+        //add new filter to selected filters
+        this.selectedFilters.push(newFilter)
       }
     }
 };
