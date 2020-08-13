@@ -14,12 +14,36 @@ export default {
     props: {
         name:String,
         link:String,
-        number:Number
+        number:String
     }
 }
 
 </script>
 
 <style lang="sass" scoped>
+    .documentation
+        &_item
+            border-bottom: 1px solid #C4C4C4
+            padding: 5px 0
+            a 
+                display: flex
+                text-decoration: none
+                padding: 15px
+                align-items: center
+                &:hover 
+                    background-color: #E5E5E5
+            &:first-of-type
+                border-top: 1px solid #C4C4C4  
+            &_number 
+                font-weight: bold
+                font-size: 16px
+                line-height: 19px
+                color: #303030
+                margin-right: 20px
+            &_title 
+                font-size: 16px
+                line-height: 19px
+                color: #303030
+
 
 </style>

@@ -11,7 +11,7 @@
                     <ul>
                         <li><nuxt-link to="/about">О компании </nuxt-link></li>    
                         <li><nuxt-link to="/career"> Карьера </nuxt-link></li>    
-                        <li><nuxt-link to="/press_center">Пресс-центр</nuxt-link></li>    
+                        <li><nuxt-link to="/press-center">Пресс-центр</nuxt-link></li>    
                         <li><nuxt-link to="/documentation">Документация </nuxt-link></li>    
                         <li><nuxt-link to="/contacts">Контакты</nuxt-link></li>   
                     </ul>
@@ -84,29 +84,30 @@
 
 <script>
 export default {
-    // mounted(){
-    //     let select = function () {
-    //         let selectHeader = document.querySelector('.feedback-select_header');
-    //         let selectItem = document.querySelector('.feedback-select_body_item');
-    //         selectHeader.click(function () {
-    //             selectToggle();
-    //         });
-    //         selectItem.each(function () {
-    //             $(this).click(function () {
-    //                 selectChoose(this);
-    //             });
-    //         });
-    //         function selectToggle() {
-    //             $('.contacts-feedback_form_theme').toggleClass('active');
-    //         }
-    //         function selectChoose(option) {
-    //             let selectedText = $(option).text();
-    //             $('.select__current').text(selectedText);
-    //             selectToggle();
-    //         }
-    //     };
-    //     select();
-    // }
+    mounted() {
+    let select = function () {
+              let selectHeader = document.querySelector('.header_city_header');
+              let selectItem =  document.querySelectorAll('.header_city_body_item');
+              selectHeader.addEventListener("click", function () {
+                  selectToggle();
+                document.querySelector('.header_number_link').classList.toggle('hidden')
+              });
+              selectItem.forEach(function (item) {
+                  item.addEventListener("click", function () {
+                      selectChoose(item);
+                  });
+              });
+              function selectToggle() {
+                  document.querySelector('.header_city').classList.toggle('active');
+              }
+              function selectChoose(option) {
+                  let selectedText = option.innerText
+                  document.querySelector('.select__current').innerText(selectedText);
+                  selectToggle();
+              }
+          };
+          select();
+  }
 }
 
     
@@ -138,6 +139,7 @@ export default {
                         transition: .2s
     &_city
         margin-left: 10px
+        position: relative
         &-choose
             display: flex
             font-size: 14px
@@ -145,6 +147,29 @@ export default {
             color: #9E9E9E
             svg
                 margin-top: 6px
+        &_header 
+            cursor: pointer
+        &_body
+            line-height: 0
+            max-height: 0
+            overflow: hidden 
+            position: absolute
+            left: 0
+            right: 0
+            top: 100%
+            width: 100%
+            transition: .2s
+        &.active 
+            .header_city_body
+                line-height: 1.3 
+                max-height: 100%      
+                background-color: #ffffff
+                overflow: visible
+                transition: .2s
+                &_item 
+                    background-color: #ffffff
+                    z-index: 99
+                    position: relative
     &_number
         position: relative
         &::before
@@ -164,6 +189,8 @@ export default {
             &:hover
                 color: #78BE20
                 transition: .2s    
+            &.hidden 
+                opacity: 0
 
     &_language
         font-size: 14px
