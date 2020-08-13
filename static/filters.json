@@ -17,6 +17,16 @@
                 "value":3,
                 "text":"Элитные семена",
                 "icon":null
+            },
+            {
+                "value":4,
+                "text":"Тест1",
+                "icon":null
+            },
+            {
+                "value":5,
+                "text":"Тест2",
+                "icon":null
             }
         ]
     },
@@ -36,6 +46,16 @@
             },
             {
                 "value":3,
+                "text":"Фунгициды",
+                "icon":null
+            },
+            {
+                "value":4,
+                "text":"Фунгициды",
+                "icon":null
+            },
+            {
+                "value":5,
                 "text":"Фунгициды",
                 "icon":null
             }

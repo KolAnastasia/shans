@@ -22,7 +22,8 @@ export default {
     },
     methods:{
         onValueChange(event){
-            let filterName =  event.target.name;
+            let filterName =  this.name;
+            //TODO: change after changing component template
             let selectedValue = event.target.value;
             this.$emit('filterChanged', {filterName, selectedValue})
         }

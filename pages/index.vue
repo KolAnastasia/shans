@@ -105,7 +105,7 @@
             :name="item.name" 
             :options="item.options"
             v-on:filterChanged="onFilterChanged" />
-    <app-Catalogszr :selectedFilters="selectedFilters"> </app-Catalogszr>
+    <app-Catalogszr :selectedFilters="selectedFilters" v-on:dataFiltered="onDataFiltered"> </app-Catalogszr>
     <app-formquest> </app-formquest>
     <div class="main_trust"> 
       <div class="container">
@@ -218,6 +218,7 @@ export default {
       });
     },
     methods:{
+      //Update selectedFilters to send this data to catalog
       onFilterChanged({filterName, selectedValue}){
         //TODO: check after changing of html for catalog-filter
         let newFilter = {
@@ -231,8 +232,23 @@ export default {
         }
         //add new filter to selected filters
         this.selectedFilters.push(newFilter)
+      },
+      // Show in filters only options available in filtered data
+      //TODO: test filters with more data and more filters 
+      onDataFiltered(filteredData){
+        this.availableFilters.forEach(filter => {
+          let allAvailableValues = filteredData.map(function(product){
+            return product[filter.name];
+          });
+          let availableOptions = filter.options.filter(function(option){
+            return allAvailableValues.some(value=>value==option.value);
+          });
+          filter.options = availableOptions;
+        });
       }
     }
+    
+    
 };
 </script>
 

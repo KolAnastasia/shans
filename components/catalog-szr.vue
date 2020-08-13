@@ -45,6 +45,7 @@ export default {
                 });
                 result = tempFilteredData;
             });
+            this.$emit('dataFiltered', result)
             return result;
         }
     },
