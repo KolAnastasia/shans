@@ -99,7 +99,13 @@
       </div>
     </div>
     <app-Formsingup> </app-Formsingup>
-    <app-Catalogszr> </app-Catalogszr>
+    <catalog-filter v-for="(item, index) in availableFilters"
+            :key="index" 
+            :title="item.title" 
+            :name="item.name" 
+            :options="item.options"
+            v-on:filterChanged="onFilterChanged" />
+    <app-Catalogszr :selectedFilters="selectedFilters" v-on:dataFiltered="onDataFiltered"> </app-Catalogszr>
     <app-formquest> </app-formquest>
     <div class="main_trust"> 
       <div class="container">
@@ -144,6 +150,8 @@ import appFormquest from "@/components/form-quest.vue";
 import appCatalogszr from "@/components/catalog-szr.vue";
 import appFormsingup from "@/components/form-sing-up.vue";
 import appBanner from "@/components/main-page/main-slider.vue";
+import catalogFilter from "@/components/catalog-filter.vue"
+import axios from "axios"
 
 export default {
   components: {
@@ -152,10 +160,14 @@ export default {
     appFooter,
     appFormquest,
     appCatalogszr,
-    appFormsingup
+    appFormsingup,
+    catalogFilter
   },
     data() {
 		return {
+      filterGroups : ["productType", "productCategory"],
+      selectedFilters:[],
+      availableFilters:[],
 			slickOptions: {
 				slidesToShow: 1,
           slidesToScroll: 1,
@@ -196,7 +208,47 @@ export default {
          ]
         }
       };
+    },
+    mounted(){
+      axios.get('/filters.json').then(response => {
+        this.availableFilters = response.data.filter((item)=>{
+          //берем только те фильтры, которрые перечислены в filterGroups
+          return this.filterGroups.indexOf(item.name)!=-1
+        });
+      });
+    },
+    methods:{
+      //Update selectedFilters to send this data to catalog
+      onFilterChanged({filterName, selectedValue}){
+        //TODO: check after changing of html for catalog-filter
+        let newFilter = {
+          "filterName": filterName,
+          "selectedValue": selectedValue
+        }
+        //before adding filter value to selected filters, check and remove if it already exists there
+        let existingFilterIndex  = this.selectedFilters.findIndex(filter => filter.filterName === newFilter.filterName);
+        if(existingFilterIndex!=-1){
+          this.selectedFilters.splice(existingFilterIndex, 1)
+        }
+        //add new filter to selected filters
+        this.selectedFilters.push(newFilter)
+      },
+      // Show in filters only options available in filtered data
+      //TODO: test filters with more data and more filters 
+      onDataFiltered(filteredData){
+        this.availableFilters.forEach(filter => {
+          let allAvailableValues = filteredData.map(function(product){
+            return product[filter.name];
+          });
+          let availableOptions = filter.options.filter(function(option){
+            return allAvailableValues.some(value=>value==option.value);
+          });
+          filter.options = availableOptions;
+        });
+      }
     }
+    
+    
 };
 </script>
 
