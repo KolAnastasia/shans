@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="catalog-szr-item"
-            v-for="(item, index) in plantsProtectionProducts"
+            v-for="(item, index) in filteredData"
             :key="index"
         >
             <catalog-item 
@@ -20,20 +20,39 @@
 </template>
 
 <script>
+//TODO: paging
 import catalogItem from "@/components/catalog-item";
 import axios from "axios"
 export default {
     components: {
         catalogItem
     },
+    props:{
+        selectedFilters:Array
+    },
     data: function() {
         return {
-            plantsProtectionProducts : []
+            allProducts : []
+        }
+    },
+    computed:{
+        filteredData:function(){
+            let result = this.allProducts;
+            this.selectedFilters.forEach(function(selectedFilter) {
+                let tempFilteredData = result;
+                tempFilteredData = result.filter(function(product){
+                    return product[selectedFilter.filterName]==selectedFilter.selectedValue
+                });
+                result = tempFilteredData;
+            });
+            this.$emit('dataFiltered', result)
+            return result;
         }
     },
     mounted(){
         axios.get('/plantProtectionData.json').then(response => {
-            this.plantsProtectionProducts = response.data
+            this.allProducts = response.data
+            this.filteredData = this.allProducts;
         });
     }
     
