@@ -51,5 +51,24 @@ export default {
             &:hover 
                 color: #78BE20
                 transition: .2s
+        &_info 
+            font-size: 12px
+            line-height: 30px
+            color: #9E9E9E
+            display: flex
+        &_date 
+            margin-right: 30px 
+            position: relative 
+            &:after 
+                position: absolute
+                content: "\2022"
+                right: -15px
+                top: 50%
+                transform: translateY(-50%)
+                width: 3px
+                height: 12px
+                line-height: 1
+
+
            
 </style>

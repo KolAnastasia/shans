@@ -68,6 +68,8 @@ export default {
                         text-decoration: none
                   .is-active 
                     border-bottom: 3px solid #78BE20
+                    a
+                      color: #000000
   .tabs-details
     background-color: #F9F9F9
     padding: 80px 80px 100px 80px 
