@@ -1,4 +1,3 @@
-<!-- Компонент для Фильтра-->
 <template>
   <div :class="'filter-'+name">    
     <div class="header_city-choose" v-on:change="onValueChange">
@@ -20,13 +19,12 @@
     </div>
   </div>
 </template>
+
 <script>
-
 import filterMixin from "@/components/shared/filterMixin.js";
-
 export default {
     mixins:[filterMixin]
-};
+}
 
 </script>
 <style scoped lang="sass">

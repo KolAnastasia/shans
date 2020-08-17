@@ -28,7 +28,7 @@ export default {
     appFooter,
     appFormquest,
     appBreadcrumb,
-    pressCenter 
+    pressCenter
   },
   
   computed: {
@@ -51,8 +51,9 @@ export default {
     heading(){
       return "Пресс-центр"
     }
-  }
-}
+  },
+};
+
 
 </script>
 

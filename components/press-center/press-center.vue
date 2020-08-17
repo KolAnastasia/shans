@@ -5,9 +5,13 @@
         <tab name="Пресс-центр" :selected="true">
             <div class="wrapper-grid">
                 <div class="wrapper-grid_content">
-                    <form class="press-center_search"> 
-                        <div class=""></div>
-                    </form>
+                  <news-filter  v-for="(item, index) in availableFilters"
+                    :key="index" 
+                    :title="item.title" 
+                    :name="item.name" 
+                    :options="item.options"
+                    v-on:filterChanged="onFilterChanged" />
+                    <!-- <news-filter  /> -->
                     <div class="press-center-wr">
                     <press-center-item
                         v-for="(item, index) in newsItems"
@@ -34,7 +38,6 @@
                 </aside>
             </div>
         </tab>
-
         <tab name="Календарь событий" :selected="false">
            <div class="wrapper-grid">
                 <div class="wrapper-grid_content">
@@ -82,9 +85,12 @@ import eventItem from "@/components/press-center/eventItem.vue";
 import tabs from "@/components/tabs/tabs.vue";
 import tab from "@/components/tabs/tab.vue";
 import formNews from "@/components/forms/form-news.vue";
+import newsFilter from "@/components/news-filter.vue";
 import btnMore from "@/components/btn-more.vue";
 import axios from "axios";
+import filtersPageMixin from "@/components/shared/filtersPageMixin.js";
 export default {
+  mixins: [filtersPageMixin],
   components: {
     pressCenterItem,
     tabs,
@@ -93,12 +99,16 @@ export default {
     galleryItem,
     eventItem,
     formNews,
+    newsFilter
   },
   data: function () {
     return {
       newsItems: [],
       calendarItems: [],
       galleryItems: [],
+      filterGroups : ["dateNews", "themeNews"],
+      selectedFilters:[],
+      availableFilters:[],
     };
   },
   mounted() {
@@ -125,7 +135,15 @@ export default {
         this.galleryItems = gallerySection[0].items;
       }
     });
-  },
+
+    axios.get('/newsFilter.json').then(response => {
+      this.availableFilters = response.data.filter((item)=>{
+        //берем только те фильтры, которрые перечислены в filterGroups
+        return this.filterGroups.indexOf(item.name)!=-1
+      });
+    });
+  }
+      
 };
 </script>
 
