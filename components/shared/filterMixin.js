@@ -16,9 +16,9 @@ var filterMixin = {
         let wrapClass  = ".filter-"+this.name;
         let filterName = this.name;
         let self = this;
-        let selectHeader = document.querySelector(wrapClass + ' .header_city_header1');
+        let selectHeader = document.querySelector(wrapClass + ' .filter-choose');
 
-        let selectItem =  document.querySelectorAll(wrapClass + ' .header_city_body_item');
+        let selectItem =  document.querySelectorAll(wrapClass + ' .filter_body_item');
         selectHeader.addEventListener("click", function () {
             selectToggle();
         });
@@ -28,7 +28,7 @@ var filterMixin = {
             });
         });
         function selectToggle() {
-            document.querySelector(wrapClass + ' .header_city').classList.toggle('active');
+            document.querySelector(wrapClass + ' .filter').classList.toggle('active');
         }
         function selectChoose(option) {
             let selectedText = option.innerText;

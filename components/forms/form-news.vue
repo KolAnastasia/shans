@@ -42,6 +42,7 @@ export default {
             width: 100%
             border: none
             margin-bottom: 25px
+            box-sizing: border-box
             &::placeholder 
                 font-weight: 800
                 font-size: 12px

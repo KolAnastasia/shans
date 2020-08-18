@@ -2,7 +2,7 @@
     <div class="news_item" >
       
             <img :src ="photoUrl"/>
-            <nuxt-link to="/">
+            <nuxt-link to="/inner-news">
                 <div class="news_item_title"> {{title}}</div>
             </nuxt-link>
             <div class="news_item_desc"> {{desc}}</div>

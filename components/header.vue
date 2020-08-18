@@ -120,7 +120,10 @@ export default {
         padding: 25px 0
         display: flex
         justify-content: space-between
+        align-items: center
     &_menu
+        display: flex
+        align-items: center
         ul 
             display: flex
             list-style: none

@@ -49,10 +49,12 @@ export default {
                     padding: 0
                     margin: 50px 0
                     display: flex
+                    max-width: 900px
+                    flex-wrap: wrap
                     li 
                         margin-right: 17px
                         position: relative
-                        .nuxt-link-active
+                        a
                             font-size: 12px
                             line-height: 14px
                             color: #9E9E9E

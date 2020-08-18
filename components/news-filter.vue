@@ -1,21 +1,22 @@
 <template>
   <div :class="'filter-'+name">    
-    <div class="header_city-choose" v-on:change="onValueChange">
-      <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1.51597 0.75L3.5 3.20461L5.48403 0.75H1.51597Z" fill="#78BE20" stroke="#78BE20" />
-      </svg>
-      <div class="header_city-wrapper">
-        <div class="header_city-wr">
-          <div id="city" class="header_city">
-            <div class="header_city_header1">
+    <div class="filter-choose" v-on:change="onValueChange">
+      
+      <div class="filter-wrapper">
+        <div class="filter-wr">
+          <div id="city" class="filter">
+            <div class="filter_header">
               <span class="select__current">{{title}}</span>
             </div>
-            <div class="header_city_body">
-              <div class="header_city_body_item"  v-for="(item, index) in options" :key="index" :data-value="item.value">{{item.text}}</div>
+            <div class="filter_body">
+              <div class="filter_body_item"  v-for="(item, index) in options" :key="index" :data-value="item.value">{{item.text}}</div>
             </div>
           </div>
         </div>
-      </div>
+      </div>      
+      <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 5L7.4641 0.5H0.535898L4 5Z" fill="#9E9E9E"/>
+      </svg>
     </div>
   </div>
 </template>
@@ -30,14 +31,18 @@ export default {
 <style scoped lang="sass">
 /* @import 'filter-styles.scss'; */
 
-.header_city
-    margin-left: 10px
-    position: relative
+.filter
+    margin-right: 10px
     &-choose
         display: flex
         font-size: 14px
         line-height: 17px
-        color: #9E9E9E
+        font-weight: bold
+        color: #000000
+        width: 100%
+        justify-content: space-between
+        padding-right: 35px
+        position: relative
         svg
             margin-top: 6px
     &_header 
@@ -53,7 +58,7 @@ export default {
         width: 100%
         transition: .2s
     &.active 
-        .header_city_body
+        .filter_body
             line-height: 1.3 
             max-height: 100%      
             background-color: #ffffff
@@ -63,4 +68,26 @@ export default {
                 background-color: #ffffff
                 z-index: 99
                 position: relative
+                padding-left: 21px
+                margin-left: -21px
+                padding-top: 10px 
+                &:last-of-type 
+                  padding-bottom: 10px
+
+.filter-dateNews
+  width: 100%
+  padding-left: 21px
+  margin-right: 35px
+  position: relative
+  &:after 
+    position: absolute 
+    content: ""
+    background-color: #E5E5E5
+    height: 32px
+    width: 1px
+    right: 0
+    top: -8px
+ 
+.filter-themeNews 
+  width: 100%
 </style>

@@ -5,13 +5,16 @@
         <tab name="Пресс-центр" :selected="true">
             <div class="wrapper-grid">
                 <div class="wrapper-grid_content">
-                  <news-filter  v-for="(item, index) in availableFilters"
-                    :key="index" 
-                    :title="item.title" 
-                    :name="item.name" 
-                    :options="item.options"
-                    v-on:filterChanged="onFilterChanged" />
-                    <!-- <news-filter  /> -->
+                  <div class="press-center-content-wr">
+                  <div class="news-filter-wr">
+                    <news-filter  v-for="(item, index) in availableFilters"
+                      :key="index" 
+                      :title="item.title" 
+                      :name="item.name" 
+                      :options="item.options"
+                      v-on:filterChanged="onFilterChanged" />
+                    <button class="btn--green news-filter_btn"> Искать </button>
+                  </div>
                     <div class="press-center-wr">
                     <press-center-item
                         v-for="(item, index) in newsItems"
@@ -24,6 +27,7 @@
                     />
                     </div>
                     <btn-more />
+                 </div> 
                 </div>
                 <aside class="wrapper-grid_aside"> 
                   <div class="press-center_events-aside">
@@ -41,9 +45,15 @@
         <tab name="Календарь событий" :selected="false">
            <div class="wrapper-grid">
                 <div class="wrapper-grid_content">
-                    <form class="press-center_search"> 
-                        <div class=""></div>
-                    </form>
+                        <div class="news-filter-wr">
+                    <news-filter  v-for="(item, index) in availableFilters"
+                      :key="index" 
+                      :title="item.title" 
+                      :name="item.name" 
+                      :options="item.options"
+                      v-on:filterChanged="onFilterChanged" />
+                    <button class="btn--green news-filter_btn"> Искать </button>
+                  </div>
                     <div class="press-center-wr">
                     <event-item
                         v-for="(item, index) in calendarItems"
@@ -169,7 +179,7 @@ export default {
     grid-gap: 50px 80px 
 
 .press-center_events-aside 
-  margin-bottom: 90px
+  margin-bottom: 80px
 
 .press-center_subtitle 
   font-weight: 800
@@ -177,7 +187,12 @@ export default {
   line-height: 29px
   margin-bottom: 35px
 
-
-        
-                
+.news-filter-wr
+  display: flex
+  align-items: center
+  justify-content: space-between
+  box-sizing: border-box
+  background-color: #ffffff
+  margin-bottom: 50px
+   
 </style>

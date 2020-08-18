@@ -51,7 +51,7 @@ export default {
           .tabs 
               ul 
                   display: flex
-                  justify-content: space-between
+                  justify-content: center
                   list-style: none
                   margin: 0
                   padding: 0
