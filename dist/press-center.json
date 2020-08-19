@@ -7,49 +7,49 @@
                 "desc":"С  2017 года  наши торговые компании участвуют в осуществлении масштабного инвестиционного  проекта в качестве партнера завода по производству средств защиты растений и прочих агрохимических продуктов «Шанс Энтерпрайз»  на территории ОЭЗ ППТ «Липецк». Плановый объем инвестиций составляет 3,5 млрд рублей.",
                 "date":"1 ноября 2019 ",
                 "source": "Публикации в СМИ",
-                "photoUrl":"/shans/dist/_nuxt/assets/news1.jpg"
+                "photoUrl":"/_nuxt/assets/news1.jpg"
             },
             {
                 "title":"Растения получат «Шанс» из Липецка",
                 "desc":"О намерении ООО «Шанс энтерпрайз» построить завод на новой елецкой площадке ОЭЗ «Липецк» „Ъ“ рассказал гендиректор Иван Кошелев. а",
                 "date":"1 ноября 2019 ",
                 "source": "Публикации в СМИ",
-                "photoUrl":"/shans/dist/_nuxt/assets/news2.jpg"
+                "photoUrl":"/_nuxt/assets/news2.jpg"
             },
             {
                 "title":"Стартовало строительство завода по производству СЗР",
                 "desc":"ГК 'Шанс' - надежный поставщик средств защиты растений уже более 15 лет, представит на выставке «югагро 2019» новинки 2020 года",
                 "date":"1 ноября 2019 ",
                 "source": "Публикации в СМИ",
-                "photoUrl":"/shans/dist/_nuxt/assets/news3.jpg"
+                "photoUrl":"/_nuxt/assets/news3.jpg"
             },
             {
                 "title":"Растения получат «Шанс» из Липецка",
                 "desc":"О намерении ООО «Шанс энтерпрайз» построить завод на новой елецкой площадке ОЭЗ «Липецк» „Ъ“ рассказал гендиректор Иван Кошелев. ",
                 "date":"1 ноября 2019 ",
                 "source": "Публикации в СМИ",
-                "photoUrl":"/shans/dist/_nuxt/assets/news4.jpg"
+                "photoUrl":"/_nuxt/assets/news4.jpg"
             },
             {
                 "title":"Стартовало строительство завода по производству СЗР",
                 "desc":"ГК 'Шанс' - надежный поставщик средств защиты растений уже более 15 лет, представит на выставке «югагро 2019» новинки 2020 года",
                 "date":"1 ноября 2019 ",
                 "source": "Публикации в СМИ",
-                "photoUrl":"/shans/dist/_nuxt/assets/news5.jpg"
+                "photoUrl":"/_nuxt/assets/news5.jpg"
             },
             {
                 "title":"Стартовало строительство завода по производству СЗР",
                 "desc":"ГК 'Шанс' - надежный поставщик средств защиты растений уже более 15 лет, представит на выставке «югагро 2019» новинки 2020 года",
                 "date":"1 ноября 2019 ",
                 "source": "Публикации в СМИ",
-                "photoUrl":"/shans/dist/_nuxt/assets/news6.jpg"
+                "photoUrl":"/_nuxt/assets/news6.jpg"
             },
             {
                 "title":"Стартовало строительство завода по производству СЗР",
                 "desc":"ГК 'Шанс' - надежный поставщик средств защиты растений уже более 15 лет, представит на выставке «югагро 2019» новинки 2020 года",
                 "date":"1 ноября 2019 ",
                 "source": "Публикации в СМИ",
-                "photoUrl":"/shans/dist/_nuxt/assets/news7.jpg"
+                "photoUrl":"/_nuxt/assets/news7.jpg"
             }
         ]
     },
@@ -111,31 +111,31 @@
         "section":"Галерея",
         "items": [
             {
-                "photoUrl":"/shans/dist/_nuxt/assets/gallery1.png",
+                "photoUrl":"/_nuxt/assets/gallery1.png",
                 "title": "Видео компании"
             },
             {
-                "photoUrl":"/shans/dist/_nuxt/assets/gallery2.jpg",
+                "photoUrl":"/_nuxt/assets/gallery2.jpg",
                 "title": "День поля - Рязань",
                 "date": "12 июня 2020"
             },
             {
-                "photoUrl":"/shans/dist/_nuxt/assets/gallery3.jpg",
+                "photoUrl":"/_nuxt/assets/gallery3.jpg",
                 "title": "День поля - Рязань",
                 "date": "12 июня 2020"
             },
             {
-                "photoUrl":"/shans/dist/_nuxt/assets/gallery4.jpg",
+                "photoUrl":"/_nuxt/assets/gallery4.jpg",
                 "title": "День поля - Башкирия",
                 "date": "24 июля 2019"
             },
             {
-                "photoUrl":"/shans/dist/_nuxt/assets/gallery5.jpg",
+                "photoUrl":"/_nuxt/assets/gallery5.jpg",
                 "title": "Строительство завода в Липецке",
                 "date": "09 января 2017"
             },
             {
-                "photoUrl":"/shans/dist/_nuxt/assets/gallery6.jpg",
+                "photoUrl":"/_nuxt/assets/gallery6.jpg",
                 "title": "Строительство завода в Липецке",
                 "date": "09 января 2017"
             }
