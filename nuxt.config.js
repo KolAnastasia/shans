@@ -1,4 +1,7 @@
 module.exports = {
+  env: {
+    baseURL: (process.env.NODE_ENV === 'production' ? 'https://serene-hypatia-a3aebe.netlify.com' : 'http://localhost:3000')
+  },
   /*
   ** Headers of the page
   */

@@ -1,5 +1,4 @@
 <template>
-    <client-only>
         <div class="main-slider-wr"> 
             <slick-slide
                 ref="slick"
@@ -45,7 +44,6 @@
             <!-- <div class="slick-slider-next"> Next </div>
             <div class="slick-slider-prev"> Prev </div> -->
         </div> 
-    </client-only>
 </template>
 
 <script>

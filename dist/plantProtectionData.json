@@ -1,0 +1,121 @@
+[
+    {
+       "title":"Глифошанс Супер, ВР 2",
+       "desc":"Системный гербицид сплошного действия для борьбы с широким спектром сорняков",
+       "productCategory":"2",
+       "productType":"2",
+       "activeSubstance":"540 г/л глифосата (калийная соль)",
+       "typeIconUrl": "/shans/dist/_nuxt/assets/gerbicide.png",
+       "photoUrl":"/shans/dist/_nuxt/assets/catalog1.png",
+        "plantList":[
+            "Яровые зерновые",
+            "Овощные",
+            "Картофель"
+        ],
+        "supessedObjects":[
+            "Однолетние злаковые сорняки",
+            "Однолетние двудольные сорняки",
+            "Многолетние злаковые сорняки"
+        ]
+
+    },
+    {
+        "title":"Имидашанс-С, КС",
+        "desc":"Инсектицид системного действия для обработки семян",
+        "productCategory":"1",
+        "productType":"2",
+        "activeSubstance":"600 г/л имидаклоприда",
+        "typeIconUrl": "/shans/dist/_nuxt/assets/gerbicide1.png",
+        "photoUrl":"/shans/dist/_nuxt/assets/catalog2.png",
+         "plantList":[
+             "Яровые зерновые",
+             "Овощные",
+             "Картофель"
+         ],
+         "supessedObjects":[
+             "Однолетние злаковые сорняки",
+             "Однолетние двудольные сорняки",
+             "Многолетние злаковые сорняки"
+         ]
+     },
+     {
+        "title":"Скорошанс, КЭ",
+        "desc":"Фунгицид для защиты яблони, груши, свеклы, картофеля от целого ряда болезней",
+        "productCategory":"2",
+        "productType":"1",
+        "activeSubstance":"250 г/л дифеноконазола",
+        "typeIconUrl": "/shans/dist/_nuxt/assets/gerbicide2.png",
+        "photoUrl":"/shans/dist/_nuxt/assets/catalog3.png",
+         "plantList":[
+             "Яровые зерновые",
+             "Овощные",
+             "Картофель"
+         ],
+         "supessedObjects":[
+             "Однолетние злаковые сорняки",
+             "Однолетние двудольные сорняки",
+             "Многолетние злаковые сорняки"
+         ]
+ 
+     },
+     {
+        "title":"Глифошанс Супер, ВР 3",
+        "desc":"Системный гербицид сплошного действия для борьбы с широким спектром сорняков",
+        "productCategory":"3",
+        "productType":"1",
+        "activeSubstance":"540 г/л глифосата (калийная соль)",
+        "typeIconUrl": "/shans/dist/_nuxt/assets/gerbicide.png",
+        "photoUrl":"/shans/dist/_nuxt/assets/catalog1.png",
+         "plantList":[
+             "Яровые зерновые",
+             "Овощные",
+             "Картофель"
+         ],
+         "supessedObjects":[
+             "Однолетние злаковые сорняки",
+             "Однолетние двудольные сорняки",
+             "Многолетние злаковые сорняки"
+         ]
+ 
+     },
+     {
+        "title":"Глифошанс Супер, ВР 3",
+        "desc":"Системный гербицид сплошного действия для борьбы с широким спектром сорняков",
+        "productCategory":"2",
+        "productType":"3",
+        "activeSubstance":"540 г/л глифосата (калийная соль)",
+        "typeIconUrl": "/shans/dist/_nuxt/assets/gerbicide.png",
+        "photoUrl":"/shans/dist/_nuxt/assets/catalog1.png",
+         "plantList":[
+             "Яровые зерновые",
+             "Овощные",
+             "Картофель"
+         ],
+         "supessedObjects":[
+             "Однолетние злаковые сорняки",
+             "Однолетние двудольные сорняки",
+             "Многолетние злаковые сорняки"
+         ]
+ 
+     },
+     {
+        "title":"Глифошанс Супер, ВР 3",
+        "desc":"Системный гербицид сплошного действия для борьбы с широким спектром сорняков",
+        "productCategory":"2",
+        "productType":"2",
+        "activeSubstance":"540 г/л глифосата (калийная соль)",
+        "typeIconUrl": "/shans/dist/_nuxt/assets/gerbicide.png",
+        "photoUrl":"/shans/dist/_nuxt/assets/catalog1.png",
+         "plantList":[
+             "Яровые зерновые",
+             "Овощные",
+             "Картофель"
+         ],
+         "supessedObjects":[
+             "Однолетние злаковые сорняки",
+             "Однолетние двудольные сорняки",
+             "Многолетние злаковые сорняки"
+         ]
+ 
+     }
+]

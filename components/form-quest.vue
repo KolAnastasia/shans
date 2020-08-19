@@ -99,6 +99,9 @@ export default {
         background-color: #78BE20
         color: #ffffff
         padding: 80px 0
+        background-image: url('../assets/decoration-line.svg')
+        background-repeat: no-repeat 
+        background-size: cover
         &_top
             display: flex
             justify-content: space-between

@@ -56,9 +56,12 @@ export default {
 <style lang="sass" scoped>
 .form-sing
     &-wrap 
-        background: #78BE20
+        background-color: #78BE20
         padding: 95px 0 100px 0
         color: #ffffff
+        background-image: url('../assets/decoration-line.svg')
+        background-repeat: no-repeat 
+        background-size: cover
     &_wr
         display: flex
         justify-content: space-between

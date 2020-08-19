@@ -9,11 +9,11 @@
             <span> Действующее вещество: </span>
                 {{activeSubstance}}
         </div>
-        <div class="catalog_icons">
-            <div class="catalog_mark">
+        <div class="catalog_item_icons">
+            <div class="catalog_item_mark">
                 <img :src="typeIconUrl"/>
             </div>
-            <div class="catalog_fav"> 
+            <div class="catalog_item_fav"> 
                 <img src="../assets/cat-favourite.svg"/>
             </div>
         </div>
@@ -43,15 +43,17 @@ export default {
             border: 1px solid #E5E5E5
             padding: 30px
             box-sizing: border-box
+            position: relative
             &_img 
                 margin-bottom: 30px
                 text-align: center
                 img 
                     width: 100%
                     max-width: 127px
+                    margin: 0 auto
             &_title
                 font-weight: bold
-                font-size: 24px
+                font-size: 23px
                 line-height: 36px
                 margin-bottom: 10px
             &_desc
@@ -59,4 +61,25 @@ export default {
                 line-height: 24px
                 color: #9E9E9E
                 margin-bottom: 25px
+                min-height: 75px
+            &_icons 
+                position: absolute
+                top: 10px
+                width: calc(100% - 60px)
+                display: flex
+                justify-content: space-between
+            &_mark 
+                width: 48px 
+            &_fav 
+                width: 30px
+            &_act-subst 
+                font-size: 14px
+                line-height: 24px
+                color: #9E9E9E
+                span 
+                    font-weight: bold
+                    color: #78BE20
+                    display: block
+                    margin-bottom: 5px
+
 </style>

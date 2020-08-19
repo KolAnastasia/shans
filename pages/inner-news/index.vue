@@ -19,16 +19,16 @@
             <slider-news />
             <p>На сегодняшний день проект реализован на 95%. Все запланированные корпуса возведены, идёт внутренняя и наружная отделка. Предприятие оснащено передовым оборудованием производителей из Германии, Италии, Великобритании. Инженерное и технологическое оборудование смонтировано на 100%. Пусконаладочные работы запланированы на январь 2020 года. В цехе по производству полимерной тары была произведена пробная партия 4-слойных полимерных канистр, изготовленных по технологии COEX, объемом 5л и 10л.</p>
             <p>Запуск нового производства состоится во II квартале 2020 года.</p>
-            <a href="#" class="news-download-link"> 
-                <div class="news-download-article"> 
-                    <div class="news-download-article_icon">
-                        <img src="../../assets/pdf-icon.svg" alt="">
-                    </div>
-                    <div class="news-download-article_content">
-                        <div class="news-download-article_title"> Комсомольская правда №3 2020</div>
-                        <div class="news-download-article_desc">(Adobe Acrobat, 827.26 Кб)</div>
-                    </div>
-                </div> 
+            <a href="#" class="news-download-link">
+              <div class="news-download-article">
+                <div class="news-download-article_icon">
+                  <img src="../../assets/pdf-icon.svg" alt />
+                </div>
+                <div class="news-download-article_content">
+                  <div class="news-download-article_title">Комсомольская правда №3 2020</div>
+                  <div class="news-download-article_desc">(Adobe Acrobat, 827.26 Кб)</div>
+                </div>
+              </div>
             </a>
             <nuxt-link to="/press-center" class="btn-text--green">
               <span>вернуться к новостям</span>
@@ -45,13 +45,39 @@
                   stroke-width="2"
                 />
               </svg>
-
             </nuxt-link>
           </div>
           <aside class="wrapper-grid_aside">
-              <div class="form-news_wr">
-              <form-news /> 
+            <div class="form-news_wr">
+              <form-news />
+            </div>
+            <div class="other-news">
+              <div class="press-center_subtitle">Другие новости</div>
+              <div class="other-news_item">
+                <div class="other-news_item_subtitle">
+                  <nuxt-link to="/inner-news">Растения получат «Шанс» из Липецка</nuxt-link>
+                </div>
+                <div
+                  class="other-news_item_desc"
+                >О намерении ООО «Шанс энтерпрайз» построить завод на новой елецкой площадке ОЭЗ «Липецк» „Ъ“ рассказал гендиректор Иван Кошелев.</div>
+                <div class="other-news_item_info">
+                  <div class="other-news_item_date">1 ноября 2019</div>
+                  <div class="other-news_item_source">Публикации в СМИ</div>
+                </div>
               </div>
+              <div class="other-news_item">
+                <div class="other-news_item_subtitle">
+                  <nuxt-link to="/inner-news">Растения получат «Шанс» из Липецка</nuxt-link>
+                </div>
+                <div
+                  class="other-news_item_desc"
+                >О намерении ООО «Шанс энтерпрайз» построить завод на новой елецкой площадке ОЭЗ «Липецк» „Ъ“ рассказал гендиректор Иван Кошелев.</div>
+                <div class="other-news_item_info">
+                  <div class="other-news_item_date">1 ноября 2019</div>
+                  <div class="other-news_item_source">Публикации в СМИ</div>
+                </div>
+              </div>
+            </div>
           </aside>
         </div>
       </div>
@@ -82,7 +108,7 @@ export default {
     citeNews,
     formNews,
     sliderNews,
-    formQuest
+    formQuest,
   },
 
   computed: {
@@ -111,43 +137,90 @@ export default {
 
 <style lang="sass" scoped>
 .news_content_wrap 
-    line-height: 30px
-    padding-bottom: 100px
+  line-height: 30px
+  padding-bottom: 100px
 
 .inner-news_subtitle
-    font-weight: bold
-    margin-bottom: 15px
+  font-weight: bold
+  margin-bottom: 15px
 
 .news_content_wrap 
-    p 
-        margin: 25px 0
+  p
+    margin: 25px 0
 
 .form-news_wr 
-    padding: 80px 
-    background-color: #F9F9F9  
+  padding: 50px
+  box-sizing: border-box
+  background-color: #F9F9F9
 
 .news-download
-    &-link
+  &-link
+    text-decoration: none
+    display: inline-block
+    margin-bottom: 50px
+    &:hover
+      .news-download-article_title
+        color: #78BE20
+  &-article 
+    display: grid
+    grid-template-columns: 48px 1fr
+    grid-column-gap: 33px
+    align-items: center
+    &_icon
+      max-width: 48px
+    &_title 
+      font-weight: bold
+      font-size: 14px
+      color: #000000
+      line-height: 24px
+    &_desc 
+      font-size: 12px
+      line-height: 24px
+      color: #9E9E9E
+
+.press-center_subtitle 
+  font-weight: 800
+  font-size: 24px
+  line-height: 29px
+  margin-bottom: 35px
+  
+
+.other-news
+  margin-top: 65px
+  &_item 
+    margin-bottom: 35px
+    &_subtitle 
+      a 
+        font-weight: bold
         text-decoration: none 
+        color: #000000
+        transition: .2s
         display: inline-block
-        margin-bottom: 50px
+        font-size: 18px
+        margin-bottom: 15px
         &:hover 
-            .news-download-article_title
-                color: #78BE20
-    &-article 
-        display: grid
-        grid-template-columns: 48px 1fr 
-        grid-column-gap: 33px
-        align-items: center 
-        &_icon 
-            max-width: 48px
-        &_title 
-            font-weight: bold
-            font-size: 14px
-            color: #000000
-            line-height: 24px
-        &_desc 
-            font-size: 12px
-            line-height: 24px
-            color: #9E9E9E
+          color: #78BE20
+          transition: .2s
+    &_desc 
+      font-size: 14px
+      line-height: 24px
+      margin-bottom: 15px
+    &_info 
+      display: flex
+      align-items: center 
+      font-size: 12px
+      line-height: 30px
+      color: #9E9E9E
+    &_date 
+      margin-right: 30px 
+      position: relative 
+      &:before 
+        content: "\2022"
+        position: absolute
+        width: 3px
+        height: 3px
+        top: 2px
+        right: -15px
+        line-height: 2
+
 </style>

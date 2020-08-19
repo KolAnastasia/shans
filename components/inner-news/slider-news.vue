@@ -1,5 +1,4 @@
 <template>
-    <client-only>
         <div class="news-slider-wr"> 
             <slick-slide
                 ref="slick"
@@ -16,10 +15,7 @@
                 </div>  
 
             </slick-slide>
-            <!-- <div class="slick-slider-next"> Next </div>
-            <div class="slick-slider-prev"> Prev </div> -->
         </div> 
-    </client-only>
 </template>
 
 <script>
@@ -29,10 +25,14 @@ export default {
 			slickOptions: {
 				slidesToShow: 1,
                 slidesToScroll: 1,
-                dots: false, // показывать `точки`
-                arrows: true // скрыть стрелки
+                
+                arrows: true, // скрыть стрелки
+                nextArrow: '<div class="next-arrow slick-arrow" style="position: absolute;bottom: -15px;right: 0;width: 15px; cursor: pointer;height: 15px;"><svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 5.5H12M12 5.5L7.49217 1M12 5.5L7.49217 10" stroke="#9E9E9E" stroke-width="2"/></svg></div>',
+                prevArrow: '<div class="prev-arrow slick-arrow" style="position: absolute;bottom: -15px;cursor: pointer;right: 55px;width: 15px; height: 15px;"> <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 5.5H2M2 5.5L6.50783 1M2 5.5L6.50783 10" stroke="#9E9E9E" stroke-width="2"/></svg></div>',
         },
-
+        mounted() {
+           
+        },
       methods: {
 
         next() {
@@ -46,15 +46,14 @@ export default {
  
         reInit() {
             // Helpful if you have to deal with v-for to update dynamic lists
-            this.$nextTick(() => {
-                this.$refs.slick.reSlick();
-            });
+           this.$refs.slick.reSlick()
         },
  
         
       },
     };
   },
+  
   
 }
 
@@ -74,10 +73,14 @@ export default {
         max-width: 980px
         margin: 50px 0
 
-.news-slider-wr .slider .slick-arrow 
-    position: absolute
-    border: none 
-    bottom: 15px 
-    background: none
+.news-slider-wr 
+    position: relative
+    .slick-arrow
+        position: absolute
+        bottom: -15px
+        right: 0
+        width: 15px 
+        height: 15px
+        background-color: #000000
 
 </style>

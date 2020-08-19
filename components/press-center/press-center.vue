@@ -32,6 +32,34 @@
                 <aside class="wrapper-grid_aside"> 
                   <div class="press-center_events-aside">
                   <div class="press-center_subtitle"> Ближайшие события </div>
+                      <div class="nearest-events"> 
+                           <div class="nearest-events_item"> 
+                            <div class="nearest-events_item_subtitle"> 
+                               <nuxt-link to="/">
+                              Растения получат «Шанс» из Липецка
+                               </nuxt-link>
+                              </div>
+                              <div class="nearest-events_item_desc">
+                                О намерении ООО «Шанс энтерпрайз» построить завод на новой елецкой площадке ОЭЗ «Липецк» „Ъ“ рассказал гендиректор Иван Кошелев. 
+                              </div>
+                              <div class="nearest-events_item_date">
+                              1 июня 2020 - 5 июня 2020 
+                              </div>
+                           </div>
+                            <div class="nearest-events_item"> 
+                            <div class="nearest-events_item_subtitle"> 
+                              <nuxt-link to="/">
+                              Растения получат «Шанс» из Липецка
+                              </nuxt-link>
+                              </div>
+                              <div class="nearest-events_item_desc">
+                                О намерении ООО «Шанс энтерпрайз» построить завод на новой елецкой площадке ОЭЗ «Липецк» „Ъ“ рассказал гендиректор Иван Кошелев. 
+                              </div>
+                              <div class="nearest-events_item_date">
+                              1 июня 2020 - 5 июня 2020 
+                              </div>
+                           </div>
+                      </div>
                       <a href="#календарь-событий" class="btn-text--green"> <span>Все события </span>
                         <svg width="39" height="11" viewBox="0 0 39 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M0 5.5H37M37 5.5L32.4922 1M37 5.5L32.4922 10" stroke="#78BE20" stroke-width="2"/>
@@ -45,15 +73,7 @@
         <tab name="Календарь событий" :selected="false">
            <div class="wrapper-grid">
                 <div class="wrapper-grid_content">
-                        <div class="news-filter-wr">
-                    <news-filter  v-for="(item, index) in availableFilters"
-                      :key="index" 
-                      :title="item.title" 
-                      :name="item.name" 
-                      :options="item.options"
-                      v-on:filterChanged="onFilterChanged" />
-                    <button class="btn--green news-filter_btn"> Искать </button>
-                  </div>
+                      
                     <div class="press-center-wr">
                     <event-item
                         v-for="(item, index) in calendarItems"
@@ -67,7 +87,8 @@
                     <btn-more />
                 </div>
                 <aside class="wrapper-grid_aside"> 
-                    <form-news />
+                    <form-news />                    
+                   
                 </aside>
             </div>
         </tab>
@@ -194,5 +215,32 @@ export default {
   box-sizing: border-box
   background-color: #ffffff
   margin-bottom: 50px
+
+.nearest-events 
+  &_item
+    margin-bottom: 35px
+    &_subtitle 
+      a
+        font-weight: bold
+        font-size: 18px
+        line-height: 24px
+        text-decoration: none
+        margin-bottom: 15px
+        color: #000
+        transition: .2s
+        &:hover 
+          color: #78BE20
+          transition: .2s
+    &_desc 
+      font-size: 14px
+      margin-bottom: 15px
+    &_date 
+      font-weight: bold
+      font-size: 12px
+      line-height: 30px
+      color: #78BE20
+    &:last-of-type
+      margin-bottom: 50px
    
+
 </style>

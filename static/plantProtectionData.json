@@ -20,13 +20,13 @@
 
     },
     {
-        "title":"Глифошанс Супер, ВР 1",
-        "desc":"Системный гербицид сплошного действия для борьбы с широким спектром сорняков",
+        "title":"Имидашанс-С, КС",
+        "desc":"Инсектицид системного действия для обработки семян",
         "productCategory":"1",
         "productType":"2",
-        "activeSubstance":"540 г/л глифосата (калийная соль)",
-        "typeIconUrl": "/_nuxt/assets/gerbicide.png",
-        "photoUrl":"/_nuxt/assets/catalog1.png",
+        "activeSubstance":"600 г/л имидаклоприда",
+        "typeIconUrl": "/_nuxt/assets/gerbicide1.png",
+        "photoUrl":"/_nuxt/assets/catalog2.png",
          "plantList":[
              "Яровые зерновые",
              "Овощные",
@@ -39,13 +39,13 @@
          ]
      },
      {
-        "title":"Глифошанс Супер, ВР 3",
-        "desc":"Системный гербицид сплошного действия для борьбы с широким спектром сорняков",
+        "title":"Скорошанс, КЭ",
+        "desc":"Фунгицид для защиты яблони, груши, свеклы, картофеля от целого ряда болезней",
         "productCategory":"2",
         "productType":"1",
-        "activeSubstance":"540 г/л глифосата (калийная соль)",
-        "typeIconUrl": "/_nuxt/assets/gerbicide.png",
-        "photoUrl":"/_nuxt/assets/catalog1.png",
+        "activeSubstance":"250 г/л дифеноконазола",
+        "typeIconUrl": "/_nuxt/assets/gerbicide2.png",
+        "photoUrl":"/_nuxt/assets/catalog3.png",
          "plantList":[
              "Яровые зерновые",
              "Овощные",
