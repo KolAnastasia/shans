@@ -1,0 +1,21 @@
+[
+    {
+        "category":"Средства защиты растений",
+        "desc":"Системный гербицид сплошного действия для борьбы с широким спектром сорняков",
+        "link":"catalog_szr",
+        "imgUrl":"assets/main-catalog-szr.png"
+    },
+    {
+        "category":"Микроудобрения",
+        "desc":"Системный гербицид сплошного действия для борьбы с широким спектром сорняков",
+        "link":"catalog_microfertilizers",
+        "imgUrl":"assets/main-catalog-micro.png"
+    },
+    {
+        "category":"Элитные семена",
+        "desc":"Системный гербицид сплошного действия для борьбы с широким спектром сорняков",
+        "link":"catalog_seed",
+        "imgUrl":"assets/main-catalog-seed.png"
+    }
+  
+]

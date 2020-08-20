@@ -5,7 +5,7 @@
         <nav>
           <ul>
             <li>
-              <nuxt-link to>Продукция</nuxt-link>
+              <nuxt-link to="/main-catalog">Продукция</nuxt-link>
             </li>
             <li>
               <nuxt-link to>Программы защиты растений</nuxt-link>
@@ -115,7 +115,7 @@
             &copy; Группа компаний «Шанс», 2020
         </div>
         <div class="footer-dev">
-            Design by <a href="https://juno.ru/"> Juno </a>
+            Design by <a href="https://juno.ru/">&nbsp;Juno </a>
         </div>
         </div>
         <div class="footer-wrap-link">
@@ -124,7 +124,7 @@
             <a href="#">  Правила пользования сайтом </a>
         </div>
         <div class="footer-dev">
-            Design by <a href="https://juno.ru/"> Juno </a>
+            Design by <a href="https://juno.ru/">&nbsp;Juno </a>
         </div>
         </div>
       </div>

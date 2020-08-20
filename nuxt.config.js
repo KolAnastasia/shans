@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     //baseURL: (process.env.NODE_ENV === 'production' ? 'http://dev.design36.ru/shans' : 'http://localhost:3000')
-    baseURL:  'http://dev.design36.ru/shans'
+    // baseURL:  'http://dev.design36.ru/shans'
   },
   /*
   ** Headers of the page
@@ -43,7 +43,7 @@ module.exports = {
   ],
   build: {
     extractCSS: true,
-    publicPath:"shans/",
+    // publicPath:"shans/",
     /*
     ** Run ESLint on save
     */
