@@ -27,7 +27,7 @@ export default {
 
     mounted() {
         axios.get('/main-catalog.json').then(response => {
-            let mainCatalogItems = response.data;
+            this.mainCatalogItems = response.data;
         });
     }
 }
@@ -35,5 +35,11 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.main-catalog-wrap 
+    display: grid 
+    grid-template-columns: repeat(auto-fit, minmax(327px, 327px))
+    justify-content: space-between
+    grid-gap: 25px 
+    margin: 60px 0 100px 0
 
 </style>

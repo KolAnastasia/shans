@@ -95,7 +95,7 @@ import listNews from "@/components/inner-news/list-news.vue";
 import citeNews from "@/components/inner-news/cite-news.vue";
 import sliderNews from "@/components/inner-news/slider-news.vue";
 import formNews from "@/components/forms/form-news.vue";
-import formQuest from "@/components/form-quest.vue";
+import formQuest from "@/components/forms/form-quest.vue";
 import appFooter from "@/components/footer.vue";
 
 export default {

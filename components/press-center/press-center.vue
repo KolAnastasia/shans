@@ -117,7 +117,7 @@ import tabs from "@/components/tabs/tabs.vue";
 import tab from "@/components/tabs/tab.vue";
 import formNews from "@/components/forms/form-news.vue";
 import newsFilter from "@/components/news-filter.vue";
-import btnMore from "@/components/btn-more.vue";
+import btnMore from "@/components/buttons/btn-more.vue";
 import axios from "axios";
 import filtersPageMixin from "@/components/shared/filtersPageMixin.js";
 export default {

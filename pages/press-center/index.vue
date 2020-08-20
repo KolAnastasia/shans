@@ -18,7 +18,7 @@
 import appHeader from "@/components/header.vue";
 import appBreadcrumb from "@/components/breadcrumb.vue";
 import pressCenter from "@/components/press-center/press-center.vue";
-import appFormquest from "@/components/form-quest.vue";
+import appFormquest from "@/components/forms/form-quest.vue";
 import appFooter from "@/components/footer.vue";
 
 

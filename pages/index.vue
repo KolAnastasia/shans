@@ -191,9 +191,9 @@
 <script>
 import appHeader from "@/components/header.vue";
 import appFooter from "@/components/footer.vue";
-import appFormquest from "@/components/form-quest.vue";
+import appFormquest from "@/components/forms/form-quest.vue";
 import appCatalogszr from "@/components/catalog-szr.vue";
-import appFormsingup from "@/components/form-sing-up.vue";
+import appFormsingup from "@/components/forms/form-sing-up.vue";
 import appBanner from "@/components/main-page/main-slider.vue";
 import catalogFilter from "@/components/catalog-filter.vue"
 import axios from "axios"

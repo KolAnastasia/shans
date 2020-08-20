@@ -18,7 +18,7 @@
 import appHeader from "@/components/header.vue";
 import appFooter from "@/components/footer.vue";
 import appCertificates from "@/components/certificates/certificates.vue";
-import appFormquest from "@/components/form-quest.vue";
+import appFormquest from "@/components/forms/form-quest.vue";
 import appBreadcrumb from "@/components/breadcrumb.vue";
 
 export default {

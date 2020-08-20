@@ -38,7 +38,9 @@ export default {
     props:{
         selectedFilters:Array
     },
+
     data: function() {
+        
         return {
             allProducts : [],
             slickOptions: {
