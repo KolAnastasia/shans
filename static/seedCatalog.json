@@ -1,0 +1,42 @@
+[
+    {
+        "imgUrl": "/_nuxt/assets/seedcatalog1.jpg",
+        "title": "Белами",
+        "desc": "Кукуруза ФАО 190",
+        "purposeImg": "/_nuxt/assets/purpose1.svg",
+        "purposeText": "На силос", 
+        "typeImg": "/_nuxt/assets/type1.svg",
+        "typeText": "На зерно",
+        "productRipeness": "1"
+    },
+    {
+        "imgUrl": "/_nuxt/assets/seedcatalog2.jpg",
+        "title": "Дюрбан",
+        "desc": "Подсолнечник",
+        "purposeImg": "/_nuxt/assets/purpose2.svg",
+        "purposeText": "Устойчив к заразихе", 
+        "typeImg": "/_nuxt/assets/type2.svg",
+        "typeText": "Линолевый",
+        "productRipeness": "2"
+    },
+    {
+        "imgUrl": "/_nuxt/assets/seedcatalog1.jpg",
+        "title": "Исбери",
+        "desc": "Кукуруза ФАО 170",
+        "purposeImg": "/_nuxt/assets/purpose1.svg",
+        "purposeText": "На силос", 
+        "typeImg": "/_nuxt/assets/type1.svg",
+        "typeText": "На зерно",
+        "productRipeness": "1"
+    },
+    {
+        "imgUrl": "/_nuxt/assets/seedcatalog1.jpg",
+        "title": "Исбери",
+        "desc": "Кукуруза ФАО 170",
+        "purposeImg": "/_nuxt/assets/purpose1.svg",
+        "purposeText": "На силос", 
+        "typeImg": "/_nuxt/assets/type1.svg",
+        "typeText": "На зерно",
+        "productRipeness": "1"
+    }
+]

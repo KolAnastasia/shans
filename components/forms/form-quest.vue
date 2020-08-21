@@ -126,15 +126,19 @@ export default {
             width: 8px
             height: 5px
         &_theme 
+            position: relative
             .form-quest_body
               max-height: 0
               position: absolute
               left: 0
               right: 0
-              bottom: 0
+              top: 100%
               overflow: hidden
               line-height: 0
               background-color: #78BE20
+              &_item 
+                background-color: #78BE20
+                padding-bottom: 10px
         &_theme.active 
             .form-quest_body
               max-height: 100%

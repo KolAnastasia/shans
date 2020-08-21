@@ -61,9 +61,9 @@
         <nav class="main-nav">
             <div class="container">
                 <ul>
-                    <li><nuxt-link to="/">Средства защиты растений</nuxt-link></li>
-                    <li><nuxt-link to="/">Микроудобрения</nuxt-link></li>
-                    <li><nuxt-link to="/">Элитные семена</nuxt-link></li>
+                    <li><nuxt-link to="/catalog_szr">Средства защиты растений</nuxt-link></li>
+                    <li><nuxt-link to="/catalog_microfertilizers">Микроудобрения</nuxt-link></li>
+                    <li><nuxt-link to="/catalog_seed">Элитные семена</nuxt-link></li>
                     <li><nuxt-link to="/">Программы защиты растений </nuxt-link></li>
                     <li><nuxt-link to="/">Вредные объекты</nuxt-link></li>
                     <li><nuxt-link to="/">Полезная информация</nuxt-link></li>

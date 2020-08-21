@@ -6,12 +6,12 @@
       <div class="main-catalog_szr">
         <div class="main-catalog_szr_top">
           <div class="main-catalog_szr_desc">
-            Современные гербициды, прошедшие регистрацию,представлены во всех известных препаративных формах, например: водный, раствор, водно-диспергируемые гранулы, концентрат эмульсии,масляная дисперсия и т.д.
+           Предлагаем широкий ассортимент гибридов семян подсолнечника для всех сегментов рынка: гибриды устойчивые ко всем известным расам заразихи, высокомасличные классические, гибриды подсолнечника для производительных систем CLEARFIELD®, CLEARFIELD®PLUS, ЭКСПРЕСС®, а также комбинированные гибриды. 
             <div
               class="main-catalog_szr_desc--bold"
-            >Инструкции к представленным препаратам помогут Вам подобрать оптимальные гербициды с учетом всех необходимых факторов.</div>
+            >
+            Все гибриды адаптированны для российских условий возделывания. Наши селекционеры уделяют огромное внимание требованиям российских сельхозтоваропроизводителей.</div>
           </div>
-          <download-catalog />
         </div>
         <div class="catalog-szr_filter-wrap"> 
           <catalog-filter v-for="(item, index) in availableFilters"
@@ -21,20 +21,9 @@
                 :options="item.options"
                 v-on:filterChanged="onFilterChanged" />
           <reset-filter> </reset-filter>
+          
+          <download-catalog />
         </div>
-        <div class="main-catalog_szr_fast"> 
-          <div class="main-catalog_szr_fast_subtitle"> Быстрые ссылки: </div>
-          <div class="main-catalog_szr_fast_content"> 
-            <a href="#">Протравители </a>
-            <a href="#">Гербициды </a>
-            <a href="#">Фунгициды </a>
-            <a href="#"> Десиканты </a>
-            <a href="#"> Фумиганты </a>
-            <a href="#">Родентициды </a>
-            <a href="#"> Инсектициды</a>
-            <a href="#">Инсектоакарициды </a>
-            <a href="#">Павы и адъюванты </a>
-          </div>
         </div>
         <div class="main-catalog_szr_results"> 
           <div class="main-catalog_szr_results_subtitle">Все результаты </div>
@@ -42,10 +31,8 @@
               <span> 64 </span>
             </div>
           </div>
-      </div>
       <div class="main-catalog_szr-wr">
-        <catalog-szr :selectedFilters="selectedFilters" v-on:dataFiltered="onDataFiltered"> </catalog-szr>
-        
+        <catalog-seed :selectedFilters="selectedFilters" v-on:dataFiltered="onDataFiltered"> </catalog-seed>
       <btn-more />
       </div>
     </div>
@@ -58,7 +45,7 @@
 import appHeader from "@/components/header.vue";
 import appBreadcrumb from "@/components/breadcrumb.vue";
 import downloadCatalog from "@/components/buttons/download-catalog.vue";
-import catalogSzr from "@/components/catalog/catalog_szr.vue";
+import catalogSeed from "@/components/catalog/catalog_seed.vue";
 import btnMore from "@/components/buttons/btn-more.vue";
 import ResetFilter from "@/components/buttons/btn-reset-filter.vue";
 import appFormquest from "@/components/forms/form-quest.vue";
@@ -76,7 +63,7 @@ export default {
     appBreadcrumb,
     downloadCatalog,
     btnMore,
-    catalogSzr,
+    catalogSeed,
     catalogFilter,
     ResetFilter
   },
@@ -85,9 +72,7 @@ export default {
     return {
       filterGroups: [
         "productType",
-        "productCategory",
-        "productCulture",
-        "productPests",
+        "productRipeness"
       ],
       selectedFilters: [],
       availableFilters: [],
@@ -108,17 +93,17 @@ export default {
     },
 
     actPage() {
-      return "Средства защиты растений";
+      return "Элитные семена";
     },
 
     heading() {
-      return "Средства защиты растений";
+      return "Элитные семена";
     },
   },
 
   
   mounted() {
-    axios.get("/filters.json").then((response) => {
+    axios.get("/seedFilter.json").then((response) => {
       this.availableFilters = response.data.filter((item) => {
         //берем только те фильтры, которрые перечислены в filterGroups
         return this.filterGroups.indexOf(item.name) != -1;
