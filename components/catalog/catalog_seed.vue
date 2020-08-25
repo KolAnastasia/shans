@@ -68,6 +68,7 @@ export default {
     display: grid 
     grid-template-columns: repeat(auto-fit, minmax(330px, 330px))
     grid-gap: 64px 15px
+    justify-content: space-between
 
 
 </style>

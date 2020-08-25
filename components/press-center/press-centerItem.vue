@@ -2,15 +2,17 @@
     <div class="news_item" >
       
             <img :src ="photoUrl"/>
-            <nuxt-link to="/inner-news">
-                <div class="news_item_title"> {{title}}</div>
-            </nuxt-link>
+            <div class="news_item_text-wr">
+                <nuxt-link to="/inner-news">
+                    <div class="news_item_title"> {{title}}</div>
+                </nuxt-link>
             <div class="news_item_desc"> {{desc}}</div>
             <div class="news_item_info"> 
                 <div class="news_item_date"> {{ date }}</div>
                 <div class="news_item_source"> {{ source }}</div>
             </div>
-       
+             </div>
+
     </div>
 </template>
 
@@ -42,8 +44,8 @@ export default {
             line-height: 24px
             color: #000000
             margin-bottom: 12px
-        img 
-            margin-bottom: 25px
+        .news_item_text-wr 
+            padding-top: 25px
         a 
             text-decoration: none
             color: #000000

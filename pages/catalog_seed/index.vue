@@ -13,7 +13,8 @@
             Все гибриды адаптированны для российских условий возделывания. Наши селекционеры уделяют огромное внимание требованиям российских сельхозтоваропроизводителей.</div>
           </div>
         </div>
-        <div class="catalog-szr_filter-wrap"> 
+        <div class="catalog-seed_filter-wrap"> 
+          <div class="catalog_seed_filter"> 
           <catalog-filter v-for="(item, index) in availableFilters"
                 :key="index" 
                 :title="item.title" 
@@ -21,7 +22,7 @@
                 :options="item.options"
                 v-on:filterChanged="onFilterChanged" />
           <reset-filter> </reset-filter>
-          
+          </div>
           <download-catalog />
         </div>
         </div>
@@ -188,13 +189,20 @@ export default {
       justify-content: space-between
       grid-gap: 64px
 
-.catalog-szr_filter-wrap 
+.catalog-seed_filter-wrap 
   display: flex
   align-items: center
   margin-bottom: 35px
+  justify-content: space-between
+
+.catalog_seed_filter 
+  display: flex 
+  align-items: center
   .filter-btn-reset 
     margin-left: 35px
 
+
+  
 @media screen and (max-width: 1165px) 
   .main-catalog_szr-wr 
     .catalog-szr-wr

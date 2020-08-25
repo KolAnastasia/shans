@@ -10,7 +10,7 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "spa":  "nuxt build --spa"
+    "spa": "nuxt build --spa"
   },
   "dependencies": {
     "@innologica/vue-stackable-modal": "^0.1.9",
@@ -26,6 +26,7 @@
     "nuxt-sass-resources-loader": "^2.0.5",
     "sass-loader": "^8.0.0",
     "vue-custom-scrollbar": "^1.1.0",
+    "vue-fancybox": "^1.0.3",
     "vue-html-to-paper": "^1.3.1",
     "vue-slick": "^1.1.15",
     "vue-yandex-maps": "^0.10.6",

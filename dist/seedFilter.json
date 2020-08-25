@@ -1,0 +1,45 @@
+[
+    {
+        "title":"Все культуры",
+        "name":"productType",
+        "options":[
+            {
+                "value":1,
+                "text":"Горох",
+                "icon":null
+            },
+            {
+                "value":2,
+                "text":"Кукуруза",
+                "icon":null
+            },
+            {
+                "value":3,
+                "text":"Нут",
+                "icon":null
+            },
+            {
+                "value":4,
+                "text":"Чечевица",
+                "icon":null
+            },
+            {
+                "value":5,
+                "text":"Зерновые",
+                "icon":null
+            }
+        ]
+    },
+    {
+        "title":"Группа спелости",
+        "name":"productRipeness",
+        "options":[
+            {
+                "value":1,
+                "text":"Скороспелость",
+                "icon":null
+            }
+        ]
+    }
+    
+]

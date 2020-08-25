@@ -67,6 +67,9 @@ export default {
           background-color: #E5E5E5
           right: 0
           top: 12px
+        &:last-of-type
+          &:after 
+            display: none
 
 .filter-productPests:after 
   display: none

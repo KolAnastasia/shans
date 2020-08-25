@@ -20,7 +20,7 @@
               <nuxt-link to>Карьера</nuxt-link>
             </li>
             <li>
-              <nuxt-link to>Пресс-центр</nuxt-link>
+              <nuxt-link to="press-center">Пресс-центр</nuxt-link>
             </li>
             <li>
               <nuxt-link to>Контакты</nuxt-link>

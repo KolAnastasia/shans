@@ -14,7 +14,7 @@
 
 <script>
 
-import catalogItem from "@/components/catalog-item";
+import catalogItem from "@/components/main-page/catalog-item";
 import axios from "axios"
 
 

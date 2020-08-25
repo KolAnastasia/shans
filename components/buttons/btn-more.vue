@@ -6,7 +6,7 @@
             </svg>
         </div>
         <span> 
-            Показать всё
+            Показать еще
         </span>
     </div>
 </template>
