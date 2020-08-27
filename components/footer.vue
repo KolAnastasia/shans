@@ -5,31 +5,31 @@
         <nav>
           <ul>
             <li>
-              <nuxt-link to="/main-catalog">Продукция</nuxt-link>
+              <a href="/main-catalog">Продукция</a>
             </li>
             <li>
-              <nuxt-link to>Программы защиты растений</nuxt-link>
+              <a href="#">Программы защиты растений</a>
             </li>
             <li>
-              <nuxt-link to>Вредные объекты</nuxt-link>
+              <a href="#">Вредные объекты</a>
             </li>
             <li>
-              <nuxt-link to>О компании</nuxt-link>
+              <a href="#">О компании</a>
             </li>
             <li>
-              <nuxt-link to>Карьера</nuxt-link>
+              <a href="#">Карьера</a>
             </li>
             <li>
-              <nuxt-link to="press-center">Пресс-центр</nuxt-link>
+              <a href="press-center">Пресс-центр</a>
             </li>
             <li>
-              <nuxt-link to>Контакты</nuxt-link>
+              <a href="#">Контакты</a>
             </li>
             <li>
-              <nuxt-link to>меры безопасности</nuxt-link>
+              <a href="#">меры безопасности</a>
             </li>
             <li>
-              <nuxt-link to>борьба с подделками</nuxt-link>
+              <a href="#">борьба с подделками</a>
             </li>
           </ul>
         </nav>
@@ -53,7 +53,7 @@
             Центральный офис
           </div>
           <div class="footer_address_represent">
-                <nuxt-link to="/"> Наши представительства </nuxt-link> 
+                <a href="/"> Наши представительства </a> 
           </div>
            <div class="footer_address_contacts">
                <a href="tel:+74732204941" class="footer_address_contacts_tel"> +7 (473) 220-49-41 </a>

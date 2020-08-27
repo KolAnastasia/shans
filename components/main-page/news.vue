@@ -10,14 +10,14 @@
                         :photoUrl="item.photoUrl"
                     >
                     
-        <nuxt-link to="/inner-news">
-        </nuxt-link>
+        <a href="/inner-news">
+        </a>
          </press-center-item>
-            <nuxt-link to="/press-center" class="btn-text--green main-news-more"> <span>Все новости </span> 
+            <a href="/press-center" class="btn-text--green main-news-more"> <span>Все новости </span> 
                 <svg width="39" height="11" viewBox="0 0 39 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 5.5H37M37 5.5L32.4922 1M37 5.5L32.4922 10" stroke="#78BE20" stroke-width="2"/>
                 </svg>
-        </nuxt-link>
+        </a>
     </div>
 </template>
 

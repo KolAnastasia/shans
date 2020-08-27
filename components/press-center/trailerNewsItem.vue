@@ -1,10 +1,10 @@
 <template>
 <div class="trailer-news_item">
-    <nuxt-link to="/">
+    <a href="/">
         <div class="trailer-news_item_title">
             {{title}}
         </div> 
-    </nuxt-link>
+    </a>
         <div class="trailer-news_item_desc">
             {{desc}}
         </div>

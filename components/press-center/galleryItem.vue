@@ -1,9 +1,9 @@
 <template>
     <div class="gallery_item" >
-        <nuxt-link to="/">
+        <a href="/">
             <img :src ="photoUrl"/>
             <div class="gallery_item_title"> {{title}}</div>
-        </nuxt-link>            
+        </a>            
             <div class="gallery_item_date"> {{ date }}</div>       
     </div>
 </template>

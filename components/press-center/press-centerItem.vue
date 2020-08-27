@@ -3,9 +3,9 @@
       
             <img :src ="photoUrl"/>
             <div class="news_item_text-wr">
-                <nuxt-link to="/inner-news">
+                <a href="/inner-news">
                     <div class="news_item_title"> {{title}}</div>
-                </nuxt-link>
+                </a>
             <div class="news_item_desc"> {{desc}}</div>
             <div class="news_item_info"> 
                 <div class="news_item_date"> {{ date }}</div>

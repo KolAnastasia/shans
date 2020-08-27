@@ -30,7 +30,7 @@
                 </div>
               </div>
             </a>
-            <nuxt-link to="/press-center" class="btn-text--green">
+            <a href="/press-center" class="btn-text--green">
               <span>вернуться к новостям</span>
               <svg
                 width="39"
@@ -45,7 +45,7 @@
                   stroke-width="2"
                 />
               </svg>
-            </nuxt-link>
+            </a>
           </div>
           <aside class="wrapper-grid_aside">
             <div class="form-news_wr">
@@ -55,7 +55,7 @@
               <div class="press-center_subtitle">Другие новости</div>
               <div class="other-news_item">
                 <div class="other-news_item_subtitle">
-                  <nuxt-link to="/inner-news">Растения получат «Шанс» из Липецка</nuxt-link>
+                  <a href="/inner-news">Растения получат «Шанс» из Липецка</a>
                 </div>
                 <div
                   class="other-news_item_desc"
@@ -67,7 +67,7 @@
               </div>
               <div class="other-news_item">
                 <div class="other-news_item_subtitle">
-                  <nuxt-link to="/inner-news">Растения получат «Шанс» из Липецка</nuxt-link>
+                  <a href="/inner-news">Растения получат «Шанс» из Липецка</a>
                 </div>
                 <div
                   class="other-news_item_desc"

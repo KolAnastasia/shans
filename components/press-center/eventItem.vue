@@ -1,9 +1,9 @@
 
 <template>
     <div class="event_item" >
-        <nuxt-link to="/">
+        <a href="/">
             <div class="event_item_title"> {{title}}</div>
-        </nuxt-link>            
+        </a>            
             <div class="event_item_desc"> {{ desc }}</div>       
             <div class="event_item_date"> {{ date }}</div>       
             <div class="event_item_location"> {{ location }}</div>       

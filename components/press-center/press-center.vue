@@ -35,9 +35,9 @@
                       <div class="nearest-events"> 
                            <div class="nearest-events_item"> 
                             <div class="nearest-events_item_subtitle"> 
-                               <nuxt-link to="/">
+                               <a href="/">
                               Растения получат «Шанс» из Липецка
-                               </nuxt-link>
+                               </a>
                               </div>
                               <div class="nearest-events_item_desc">
                                 О намерении ООО «Шанс энтерпрайз» построить завод на новой елецкой площадке ОЭЗ «Липецк» „Ъ“ рассказал гендиректор Иван Кошелев. 
@@ -48,9 +48,9 @@
                            </div>
                             <div class="nearest-events_item"> 
                             <div class="nearest-events_item_subtitle"> 
-                              <nuxt-link to="/">
+                              <a href="/">
                               Растения получат «Шанс» из Липецка
-                              </nuxt-link>
+                              </a>
                               </div>
                               <div class="nearest-events_item_desc">
                                 О намерении ООО «Шанс энтерпрайз» построить завод на новой елецкой площадке ОЭЗ «Липецк» „Ъ“ рассказал гендиректор Иван Кошелев. 

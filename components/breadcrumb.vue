@@ -7,13 +7,11 @@
             v-for="(link, index) in links"
             :key="index"
           >
-            <nuxt-link
-              :to="link"
-            >
+            <a href="#" >
               <div>
                 {{ names[index] }}
               </div>
-            </nuxt-link>
+            </a>
           </li>
             <li class="active-page"> 
                 {{actPage}}

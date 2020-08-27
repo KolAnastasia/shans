@@ -1,6 +1,6 @@
 <template>
     <div class="catalog_item">
-        <nuxt-link to="/catalog_szr_inner"> 
+        <a href="/catalog_szr_inner"> 
             <div class="catalog_item_img"> 
                 <img :src="photoUrl"/>
             </div>
@@ -20,7 +20,7 @@
                     <img src="../../assets/cat-favourite.svg"/>
                 </div>
             </div>
-        </nuxt-link>
+        </a>
     </div>
 </template>
 

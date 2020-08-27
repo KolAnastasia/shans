@@ -5,13 +5,13 @@
         </div>
         <div class="main-catalog_item_category">{{category}} </div>
         <div class="main-catalog_item_desc">{{desc}} </div>
-        <nuxt-link :to="link"> 
+        <a href="#"> 
             <span class="btn-text--green"> <span>Подробнее </span> 
                 <svg width="39" height="11" viewBox="0 0 39 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 5.5H37M37 5.5L32.4922 1M37 5.5L32.4922 10" stroke="#78BE20" stroke-width="2"/>
                 </svg>
             </span>
-        </nuxt-link>
+        </a>
     </div>
 </template>
 

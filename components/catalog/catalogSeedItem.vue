@@ -1,6 +1,6 @@
 <template>
 
-            <nuxt-link to="/" class="seed-item-link"> 
+            <a href="/" class="seed-item-link"> 
     <div class="seed-item"> 
             <img :src="imgUrl"  />
             <div class="seed-item_title"> {{ title }} </div>
@@ -24,7 +24,7 @@
             </div>
     </div>
     
-            </nuxt-link>
+            </a>
     
 </template>
 

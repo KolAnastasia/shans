@@ -1,6 +1,6 @@
 <template>
     <div class="cat-micro_item">
-        <nuxt-link to="/">
+        <a href="/">
         <div class="cat-micro_item_img"> 
             <img :src="imgUrl"   /> 
         </div>    
@@ -20,7 +20,7 @@
                 </svg>
             </div>
         </div>
-        </nuxt-link>
+        </a>
     </div>
 </template>
 

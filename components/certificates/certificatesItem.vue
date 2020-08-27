@@ -1,9 +1,9 @@
 <template>
     <div class="documentation_item" >
-        <nuxt-link :to ="link" >
+        <a href="#" >
             <div class="documentation_item_number"> {{number}}</div>
             <div class="documentation_item_title"> {{name}}</div>
-        </nuxt-link>
+        </a>
     </div>
 </template>
 
